@@ -1,8 +1,13 @@
+import Logo from '@/components/common/Logo'
 import React from 'react'
 
 const TopHeader = () => {
   return (
-    <div>TopHeader</div>
+ <>
+ <div className='bg-primary'>
+    <Logo/>
+ </div>
+ </>
   )
 }
 
