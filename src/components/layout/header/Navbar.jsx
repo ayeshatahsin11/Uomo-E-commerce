@@ -28,6 +28,14 @@ const Navbar = () => {
       id: 6,
       name: "PAGES",
     },
+    {
+      id: 7,
+      name: "SPECIAL OFFER",
+    },
+    {
+      id: 8,
+      name: "PURCHASE THEME",
+    },
   ];
   return (
     <>
@@ -35,7 +43,7 @@ const Navbar = () => {
         <Container>
           <ul className="flex text-white gap-11">
             {navData?.map((navlist) => (
-              <li className="font-normal leading-6 relative text-sm after:content-[''] after:w-0 hover:after:w-6.5 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:duration-300">
+              <li className={`font-normal leading-6 relative text-sm after:content-[''] after:w-0 hover:after:w-2/4 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:duration-300 ${navlist.id == 7? "ml-auto" : ""}`}>
                 <Link href={`${navlist.id}`}>{navlist.name}</Link>
               </li>
             ))}
