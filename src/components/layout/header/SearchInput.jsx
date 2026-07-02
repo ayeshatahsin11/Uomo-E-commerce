@@ -14,7 +14,7 @@ const SearchInput = () => {
           className="w-full h-full bg-white rounded-sm  pl-5"
           placeholder="Search Products..."
         />
-        <div className="flex items-center absolute right-4">
+        <div className="flex items-center gap-4.25 absolute right-4">
           <NativeSelect
             className="w-30 text-primary-black text-sm font-normal leading-6"
             selectClassName="border-none"

@@ -3,6 +3,7 @@ import Logo from '@/components/common/Logo'
 import React from 'react'
 import Container from '../Container'
 import SearchInput from './SearchInput'
+import NavIcons from './NavIcons'
 
 const TopHeader = () => {
   return (
@@ -11,9 +12,10 @@ const TopHeader = () => {
   <div className='bg-secondary'>
 
     <Container>
-     <div className='flex items-center gap-8.25'>
+     <div className='flex items-center gap-8.25 py-5'>
        <Logo/>
       <SearchInput/>
+     <NavIcons/>
      </div>
     </Container>
  </div>
