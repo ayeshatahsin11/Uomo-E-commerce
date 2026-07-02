@@ -8,11 +8,13 @@ const TopHeader = () => {
   return (
  <>
 
-  <div className='bg-primary'>
+  <div className='bg-secondary'>
 
     <Container>
-      <Logo/>
+     <div className='flex items-center gap-8.25'>
+       <Logo/>
       <SearchInput/>
+     </div>
     </Container>
  </div>
 
