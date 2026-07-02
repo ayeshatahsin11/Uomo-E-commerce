@@ -6,19 +6,19 @@ import { Menu } from "lucide-react";
 const NavIcons = () => {
   return (
     <div className="ml-auto flex gap-7.5">
-      <button>
+      <button className="cursor-pointer">
         <UserRound size={20} color="white" />
       </button>
-      <button>
+      <button className="cursor-pointer">
         <Heart size={20} color="white" />
       </button>
-      <button className="relative">
+      <button className="relative cursor-pointer">
         <Handbag size={20} color="white" />
         <span className="size-4 rounded-full bg-primary text-white font-medium text-[10px] absolute -bottom-1.25 -right-2.5">
           3
         </span>
       </button>
-      <button>
+      <button className="cursor-pointer">
         <Menu size={20} color="white" />
       </button>
     </div>

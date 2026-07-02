@@ -17,7 +17,7 @@ const SearchInput = () => {
         <div className="flex items-center gap-4.25 absolute right-4">
           <NativeSelect
             className="w-30 text-primary-black text-sm font-normal leading-6"
-            selectClassName="border-none"
+            selectClassName="border-none cursor-pointer"
           >
             <NativeSelectOption value="">All Category</NativeSelectOption>
             <NativeSelectOption value="Skin-Care">Skin-care</NativeSelectOption>
@@ -27,7 +27,7 @@ const SearchInput = () => {
               Tools & others
             </NativeSelectOption>
           </NativeSelect>
-          <Search />
+          <Search className="cursor-pointer" />
         </div>
       </div>
     </>
