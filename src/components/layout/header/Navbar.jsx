@@ -43,7 +43,9 @@ const Navbar = () => {
         <Container>
           <ul className="flex text-white gap-11">
             {navData?.map((navlist) => (
-              <li className={`font-normal leading-6 relative text-sm after:content-[''] after:w-0 hover:after:w-2/4 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:duration-300 ${navlist.id == 7? "ml-auto" : ""}`}>
+              <li
+                className={`font-normal leading-6 relative text-sm after:content-[''] after:w-0 hover:after:w-2/4 after:h-0.5 after:bg-white after:absolute after:bottom-0 after:left-0 after:duration-300 ${navlist.id == 7 ? "ml-auto" : ""}`}
+              >
                 <Link href={`${navlist.id}`}>{navlist.name}</Link>
               </li>
             ))}
@@ -52,6 +54,8 @@ const Navbar = () => {
       </nav>
     </>
   );
-};
+};   
 
 export default Navbar;
+
+<nav>okidfgidfygdf gidfg</nav>;
