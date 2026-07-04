@@ -16,7 +16,7 @@ const Banner = () => {
     <>
       <section
         style={{ background: `url(${BannerImg.src})` }}
-        className="h-auto"
+        className="h-auto relative"
       >
         <Container>
          <Swiper navigation={{

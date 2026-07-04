@@ -1,4 +1,5 @@
 import Priviliges from "@/components/layout/Contents/Priviliges";
+import Products from "@/components/layout/Contents/Products";
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import Banner from "@/components/layout/home/Banner";
@@ -10,7 +11,7 @@ const page = () => {
       <Header />
       <Banner/>
       <Priviliges/>
-    
+     <Products/>
     </>
   );
 };
