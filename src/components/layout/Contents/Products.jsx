@@ -7,11 +7,11 @@ const Products = () => {
   return (
    <>
     <section className='mt-24.25 mb-25'>
-        <Container>
-           <div className='flex items-center justify-between'> 
+        <Container className="relative">
+         
              <Titles name="featured products"/>
             <Nav_Tabs/>
-           </div>
+          
         </Container>
     </section>
  </>

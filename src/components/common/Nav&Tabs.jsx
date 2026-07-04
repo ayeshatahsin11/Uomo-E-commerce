@@ -1,11 +1,13 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ProductCards from "./ProductCards";
 
 const Nav_Tabs = () => {
   return (
     <>
       <Tabs defaultValue="overview">
-        <TabsList variant="line">
+       <div className="absolute top-2.75 right-0">
+         <TabsList variant="line">
           <TabsTrigger
             className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300"
             value="Best Sellers"
@@ -31,8 +33,18 @@ const Nav_Tabs = () => {
             Best Rated
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="bestsellers">
-          <p>Best Items ever</p>
+       </div>
+        <TabsContent value="Best Sellers">
+       <ProductCards/>
+        </TabsContent>
+        <TabsContent value="Most Popular">
+          <p>Here are the popular items</p>
+        </TabsContent>
+        <TabsContent value="Top 20">
+          <p>top products</p>
+        </TabsContent>
+        <TabsContent value="Best Rated">
+          <p>rated highest</p>
         </TabsContent>
       </Tabs>
     </>
