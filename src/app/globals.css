@@ -143,4 +143,7 @@
   .swiper-pagination {
     @apply flex gap-7! h-10! left-2.5!;
   }
+  .star-svg {
+    @apply text-[#EEBA36]! inline-block!;
+  }
 }
