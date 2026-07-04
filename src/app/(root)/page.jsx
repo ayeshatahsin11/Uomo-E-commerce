@@ -1,3 +1,4 @@
+import Priviliges from "@/components/layout/Contents/Priviliges";
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import Banner from "@/components/layout/home/Banner";
@@ -8,8 +9,8 @@ const page = () => {
     <>
       <Header />
       <Banner/>
-   
-      <Footer />
+      <Priviliges/>
+    
     </>
   );
 };
