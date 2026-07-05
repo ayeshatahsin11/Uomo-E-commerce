@@ -7,7 +7,7 @@ import { Rating } from "react-simple-star-rating";
 import StarRating from "./StarRating";
 const ProductCards = () => {
   return (
-    <div className="w-63.75 border border-#E4E4E4 rounded-lg mt-8.75">
+    <div className="w-63.75 border border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 mt-8.75">
       <Image src={ProductImage} alt="product" width={255} height={200} />
       <div className="pt-8.5 pl-5 pr-8.25 pb-3.25">
         <h4 className="font-normal text-sm text-primary-gray leading-6">
