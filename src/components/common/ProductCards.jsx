@@ -11,7 +11,7 @@ const ProductCards = () => {
   return (
     <div className="relative w-63.75 border group  border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 mt-8.75">
       <Image src={ProductImage} alt="product" width={255} height={200} />
-      <div className=" hidden  group-hover:block absolute top-58 left-1/2 translate-x-[-50%]">
+      {/* <div className=" hidden  group-hover:block absolute top-58 left-1/2 translate-x-[-50%]">
         <ul className="flex gap-2.5 justify-center ">
           <li className=" w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
             <Handbag className="size-4" />
@@ -20,6 +20,19 @@ const ProductCards = () => {
             <Eye className="size-4" />
           </li>
           <li className=" w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+            <Heart className="size-4" />
+          </li>
+        </ul>
+      </div> */}
+      <div className="absolute top-58 left-1/2 translate-x-[-50%] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
+        <ul className="flex gap-2.5 justify-center">
+          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+            <Handbag className="size-4" />
+          </li>
+          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+            <Eye className="size-4" />
+          </li>
+          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
             <Heart className="size-4" />
           </li>
         </ul>
