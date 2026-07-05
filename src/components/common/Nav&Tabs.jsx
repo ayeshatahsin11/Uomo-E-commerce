@@ -42,13 +42,25 @@ const Nav_Tabs = () => {
           </div>
         </TabsContent>
         <TabsContent value="Most Popular">
-          <p>Here are the popular items</p>
+          <div className="grid grid-cols-5 ">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <ProductCards />
+            ))}
+          </div>
         </TabsContent>
         <TabsContent value="Top 20">
-          <p>top products</p>
+          <div className="grid grid-cols-5 ">
+            {Array.from({ length: 8 }).map((_, index) => (
+              <ProductCards />
+            ))}
+          </div>
         </TabsContent>
         <TabsContent value="Best Rated">
-          <p>rated highest</p>
+          <div className="grid grid-cols-5 ">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <ProductCards />
+            ))}
+          </div>
         </TabsContent>
       </Tabs>
     </>
