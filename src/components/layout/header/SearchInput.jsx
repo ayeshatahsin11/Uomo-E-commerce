@@ -23,8 +23,8 @@ const SearchInput = () => {
             <NativeSelectOption value="Fruits">Fruits</NativeSelectOption>
             <NativeSelectOption value="Vegetables">Vegetables</NativeSelectOption>
             <NativeSelectOption value="Nuts">Nuts</NativeSelectOption>
-            <NativeSelectOption value="Oil">
-              Oil
+            <NativeSelectOption value="Seeds">
+              Seeds
             </NativeSelectOption>
           </NativeSelect>
           <Search className="cursor-pointer" />

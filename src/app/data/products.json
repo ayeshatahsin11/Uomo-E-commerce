@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "ïmage": "",
+    "ïmage": "../../../public/images/banana.jpg",
     "category": "Fruit",
     "title": "Organic Banana",
     "rating": 4,
@@ -9,138 +9,129 @@
     "price": 35
   },
   {
-    "id": 1,
-    "ïmage": "",
+    "id": 2,
+    "ïmage": "../../../public/images/kiwi.jpg",
     "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "title": "Fresh kiwi",
+    "rating": 4.5,
+    "reviews": 258741,
+    "price": 30
   },
   {
-    "id": 1,
-    "ïmage": "",
+    "id": 3,
+    "ïmage": "../../../public/images/strawberry.jpg",
     "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "title": "Large Strawberry",
+    "rating": 5,
+    "reviews": 450218,
+    "price": 40
   },
   {
-    "id": 1,
-    "ïmage": "",
+    "id": 4,
+    "ïmage": "../../../public/images/orange.jpg",
     "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "title": "Organic Oranges",
+    "rating": 3,
+    "reviews": 256841,
+    "price": 28
   },
   {
-    "id": 1,
-    "ïmage": "",
+    "id": 5,
+    "ïmage": "../../../public/images/Pomegranate.png",
     "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "title": "Pomegranate",
+    "rating": 3,
+    "reviews": 198674,
+    "price": 24
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 6,
+    "ïmage": "../../../public/images/tomato.jpg",
+    "category": "Vegetable",
+    "title": "Juicy Tomatoes",
+    "rating": 5,
+    "reviews": 482571,
+    "price": 40
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 7,
+    "ïmage": "../../../public/images/onion.png",
+    "category": "Vegetable",
+    "title": "Large Onions",
+    "rating": 4.5,
+    "reviews": 125874,
+    "price": 38
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 8,
+    "ïmage": "../../../public/images/broccoli.jpg",
+    "category": "Vegetable",
+    "title": "Fresh Broccoli",
+    "rating": 3.5,
+    "reviews": 156428,
+    "price": 27
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 9,
+    "ïmage": "../../../public/images/Asperges.png",
+    "category": "Vegetable",
+    "title": "Asparagus",
+    "rating": 2.5,
+    "reviews": 215897,
+    "price": 22
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
+    "id": 10,
+    "ïmage": "../../../public/images/Cauliflower.jpg",
+    "category": "Vegetable",
+    "title": "Cauliflower",
     "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "reviews": 231589,
+    "price": 31
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 11,
+    "ïmage": "../../../public/images/pumpkin.jpg",
+    "category": "Vegetable",
+    "title": "Pumpkin",
+    "rating": 3.5,
+    "reviews": 259631,
+    "price": 33
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
+    "id": 12,
+    "ïmage": "../../../public/images/walnut.jpg",
+    "category": "Nuts",
+    "title": "Walnuts",
+    "rating": 4.5,
     "reviews": 323963,
-    "price": 35
+    "price": 40
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 13,
+    "ïmage": "../../../public/images/almonds.jpg",
+    "category": "Nuts",
+    "title": "Almonds",
+    "rating": 4.5,
+    "reviews": 258964,
+    "price": 38
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 14,
+    "ïmage": "../../../public/images/cashews.jpg",
+    "category": "Nuts",
+    "title": "Cashews",
+    "rating": 5,
+    "reviews": 456985,
+    "price": 45
   },
   {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
-  },
-  {
-    "id": 1,
-    "ïmage": "",
-    "category": "Fruit",
-    "title": "Organic Banana",
-    "rating": 4,
-    "reviews": 323963,
-    "price": 35
+    "id": 15,
+    "ïmage": "../../../public/images/chia.jpg",
+    "category": "Seeds",
+    "title": "Chia Seeds",
+    "rating": 5,
+    "reviews": 236985,
+    "price": 40
   }
 ]
