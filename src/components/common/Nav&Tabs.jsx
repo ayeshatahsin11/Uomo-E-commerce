@@ -68,3 +68,6 @@ const Nav_Tabs = () => {
 };
 
 export default Nav_Tabs;
+
+
+// api banao shob apge, text er jnno truncate use koro and image er jnno obeject-contain and next js e domain name cofig

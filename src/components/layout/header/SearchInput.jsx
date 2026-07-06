@@ -20,11 +20,11 @@ const SearchInput = () => {
             selectClassName="border-none cursor-pointer"
           >
             <NativeSelectOption value="">All Category</NativeSelectOption>
-            <NativeSelectOption value="Skin-Care">Skin-care</NativeSelectOption>
-            <NativeSelectOption value="Make-up">Make-Up</NativeSelectOption>
-            <NativeSelectOption value="Hair">Hair</NativeSelectOption>
-            <NativeSelectOption value="Tool & others">
-              Tools & others
+            <NativeSelectOption value="Fruits">Fruits</NativeSelectOption>
+            <NativeSelectOption value="Vegetables">Vegetables</NativeSelectOption>
+            <NativeSelectOption value="Nuts">Nuts</NativeSelectOption>
+            <NativeSelectOption value="Oil">
+              Oil
             </NativeSelectOption>
           </NativeSelect>
           <Search className="cursor-pointer" />
