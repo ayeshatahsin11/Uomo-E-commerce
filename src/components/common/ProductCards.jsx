@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Handbag } from "lucide-react";
 import { Eye } from "lucide-react";
 import { Heart } from "lucide-react";
@@ -8,6 +9,16 @@ import ProductImage from "@/app/assests/Images/productImage01.jpg";
 import { Rating } from "react-simple-star-rating";
 import StarRating from "./StarRating";
 const ProductCards = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const res = await fetch("/api/Products");
+      const data = await res.json();
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
   return (
     <div className="relative w-63.75 border group  border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 mt-8.75">
       <Image src={ProductImage} alt="product" width={255} height={200} />
