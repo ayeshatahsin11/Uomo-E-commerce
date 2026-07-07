@@ -1,3 +1,4 @@
+import Blog from "@/components/layout/Contents/Blog";
 import Category from "@/components/layout/Contents/Category";
 import Dsicount from "@/components/layout/Contents/Dsicount";
 import Priviliges from "@/components/layout/Contents/Priviliges";
@@ -18,6 +19,7 @@ const page = () => {
      <Category/>
      <TopSelling/>
      <Dsicount/>
+     <Blog/>
     </>
   );
 };

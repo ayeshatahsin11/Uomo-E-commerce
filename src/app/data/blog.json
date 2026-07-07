@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "image": "/images/blog.jpg",
+        "author" : "admin",
+        "date" : "20 april, 2025",
+        "about" : "Natural Power Plate: How Fruits, Vegetables, Seeds & Milk Build a Healthier You"
+
+    },
+    {
+        "id" : 2,
+        "image": "/images/blog01.jpg",
+        "author" : "admin",
+        "date" : "15 October, 2025",
+        "about" : "The Ultimate Superfood Combo: Why Fruits, Veggies, Seeds and Milk Deserve a Place in Your Daily Diet"
+
+    },
+    {
+        "id" : 3,
+        "image": "/images/blog02.jpg",
+        "author" : "admin",
+        "date" : "08 December, 2025",
+        "about" : "From Fresh Fruits to Nutritious Milk: A Complete Guide to Everyday Healthy Eating"
+
+    },
+    {
+        "id" : 4,
+        "image": "/images/blog03.jpg",
+        "author" : "admin",
+        "date" : "11 February, 2026",
+        "about" : "Fuel Your Body Naturally: The Benefits of Fruits, Vegetables, Seeds and Milk"
+
+    }
+]

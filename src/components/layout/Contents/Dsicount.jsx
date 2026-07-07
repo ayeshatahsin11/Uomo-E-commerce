@@ -5,7 +5,7 @@ import DiscountProducts from "./DiscountProducts";
 
 const Dsicount = () => {
   return (
-    <section className="mt-25 mb-25">
+    <section className="mt-25">
       <Container>
         <Titles name="Discount" />
    
