@@ -1,31 +1,31 @@
 [
     {
         "id" : 1,
-        "image" : "",
+        "image" : "/images/fruits.jpg",
         "name" : "Fruit",
         "quantity" : 35
     },
     {
         "id" : 2,
-        "image" : "",
+        "image" : "/images/bakery.jpg",
         "name" : "Bakery",
         "quantity" : 26
     },
     {
         "id" : 3,
-        "image" : "",
+        "image" : "/images/fish.jpg",
         "name" : "Fish",
         "quantity" : 20
     },
     {
         "id" : 4,
-        "image" : "",
+        "image" : "/images/milk.jpg",
         "name" : "Milk",
         "quantity" : 12
     },
     {
         "id" : 5,
-        "image" : "",
+        "image" : "/images/veggies.jpg",
         "name" : "Vegetables",
         "quantity" : 25
     }

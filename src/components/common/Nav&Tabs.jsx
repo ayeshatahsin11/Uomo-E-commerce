@@ -25,10 +25,10 @@ const Nav_Tabs = () => {
       <Tabs defaultValue="Best Sellers">
         <div className="absolute top-2.75 right-0">
           <TabsList variant="line">
-            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 " value="Best Sellers">Best Sellers</TabsTrigger>
-            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12" value="Most Popular">Most Popular</TabsTrigger>
-            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12" value="Top 20">Top 20</TabsTrigger>
-            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12" value="Best Rated">Best Rated</TabsTrigger>
+            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 cursor-pointer " value="Best Sellers">Best Sellers</TabsTrigger>
+            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12 cursor-pointer" value="Most Popular">Most Popular</TabsTrigger>
+            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12 cursor-pointer" value="Top 20">Top 20</TabsTrigger>
+            <TabsTrigger   className="text-primary-gray text-[16px] font-medium after:w-[50%] px-0  after:duration-300 ml-12 cursor-pointer" value="Best Rated">Best Rated</TabsTrigger>
           </TabsList>
         </div>
 

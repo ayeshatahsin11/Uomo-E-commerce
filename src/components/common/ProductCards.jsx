@@ -7,13 +7,15 @@ import StarRating from "./StarRating";
 const ProductCards = ({ product }) => {
   return (
     <div key={product.id} className="relative w-63.75 border group border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 mt-8.75">
-      <Image
-        src={product.image}
-        alt={product.title}
-        width={255}
-        height={200}
-        className="object-contain w-63.75 h-50"
-      />
+     <div className="relative w-63.75 h-50 overflow-hidden">
+  <Image
+    src={product.image}
+    alt={product.title}
+    fill
+    sizes="255px"
+    className="object-contain p-6"
+  />
+</div>
 
       <div className="absolute top-1/2 left-1/2 translate-x-[-50%] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
         <ul className="flex gap-2.5 justify-center">
