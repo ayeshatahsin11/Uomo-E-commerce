@@ -1,4 +1,5 @@
 import Category from "@/components/layout/Contents/Category";
+import Dsicount from "@/components/layout/Contents/Dsicount";
 import Priviliges from "@/components/layout/Contents/Priviliges";
 import Products from "@/components/layout/Contents/Products";
 import TopSelling from "@/components/layout/Contents/TopSelling";
@@ -16,6 +17,7 @@ const page = () => {
      <Products/>
      <Category/>
      <TopSelling/>
+     <Dsicount/>
     </>
   );
 };
