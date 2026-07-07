@@ -135,8 +135,8 @@ const Banner = () => {
           </div>
           </SwiperSlide>
          </Swiper>
-         <button className="custom-prev rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] left-15.25"><ChevronLeft/></button>
-         <button className="custom-next rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] right-15.25"><ChevronRight/></button>
+         <button className="custom-prev cursor-pointer rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] left-15.25"><ChevronLeft/></button>
+         <button className="custom-next cursor-pointer rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] right-15.25"><ChevronRight/></button>
         </Container>
       </section>
     </>
