@@ -137,7 +137,7 @@
     @apply size-1.5! rounded-full opacity-100! bg-[#DDC2B9]!;
   }
   .swiper-pagination-bullet-active {
-    @apply size-1.5! rounded-full bg-primary-black! relative after:content-[''] after:size-7.5 after:border-2 after:rounded-full after:absolute after:-translate-x-1/2 after:-translate-y-1/2 after:top-2/4 after:left-2/4;
+    @apply size-1.5!  rounded-full bg-primary-black! relative after:content-[''] after:size-7.5 after:border-2 after:rounded-full after:absolute after:-translate-x-1/2 after:-translate-y-1/2 after:top-2/4 after:left-2/4;
   }
 
   .swiper-pagination {

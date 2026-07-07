@@ -1,6 +1,7 @@
 import Category from "@/components/layout/Contents/Category";
 import Priviliges from "@/components/layout/Contents/Priviliges";
 import Products from "@/components/layout/Contents/Products";
+import TopSelling from "@/components/layout/Contents/TopSelling";
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import Banner from "@/components/layout/home/Banner";
@@ -14,6 +15,7 @@ const page = () => {
       <Priviliges/>
      <Products/>
      <Category/>
+     <TopSelling/>
     </>
   );
 };
