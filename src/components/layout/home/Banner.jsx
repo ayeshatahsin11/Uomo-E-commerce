@@ -15,6 +15,7 @@ const Banner = () => {
   return (
     <>
       <section
+      id="banner"
         style={{ background: `url(${BannerImg.src})` }}
         className="h-auto relative"
       >
@@ -23,7 +24,7 @@ const Banner = () => {
           nextEl : ".custom-next",
           prevEl : ".custom-prev"
          }}
-         pagination= {true}
+         pagination= {{clickable: true}}
          modules={[Navigation,Pagination]} loop={true}>
           <SwiperSlide>
              <div className="flex justify-between pt-31 pb-26.75">

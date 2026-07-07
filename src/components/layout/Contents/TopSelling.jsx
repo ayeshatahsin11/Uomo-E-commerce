@@ -21,7 +21,7 @@ const TopSelling = () => {
         fetchProducts();
       }, []);
   return (
-    <section className="mt-22.75 mb-10">
+    <section className="mt-22.75 mb-10" id="topselling">
       <Container>
      <div className="flex justify-between items-center">
            <Titles name="Top selling products" />
