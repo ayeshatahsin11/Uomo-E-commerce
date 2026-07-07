@@ -1,0 +1,33 @@
+[
+    {
+        "id" : 1,
+        "image" : "",
+        "name" : "Fruit",
+        "quantity" : 35
+    },
+    {
+        "id" : 2,
+        "image" : "",
+        "name" : "Bakery",
+        "quantity" : 26
+    },
+    {
+        "id" : 3,
+        "image" : "",
+        "name" : "Fish",
+        "quantity" : 20
+    },
+    {
+        "id" : 4,
+        "image" : "",
+        "name" : "Milk",
+        "quantity" : 12
+    },
+    {
+        "id" : 5,
+        "image" : "",
+        "name" : "Vegetables",
+        "quantity" : 25
+    }
+]
+

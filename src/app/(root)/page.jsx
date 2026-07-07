@@ -1,3 +1,4 @@
+import Category from "@/components/layout/Contents/Category";
 import Priviliges from "@/components/layout/Contents/Priviliges";
 import Products from "@/components/layout/Contents/Products";
 import Footer from "@/components/layout/footer/Footer";
@@ -12,6 +13,7 @@ const page = () => {
       <Banner/>
       <Priviliges/>
      <Products/>
+     <Category/>
     </>
   );
 };
