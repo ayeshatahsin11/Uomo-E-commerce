@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Container from "../Container";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <section className="bg-secondary text-white">
+      <Container>fsdagadfgdfgdgff</Container>
+    </section>
+  );
+};
 
-export default Footer
+export default Footer;

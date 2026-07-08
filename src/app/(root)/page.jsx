@@ -22,6 +22,7 @@ const page = () => {
      <Dsicount/>
      <Blog/>
      <Contact/>
+    <Footer/>
     </>
   );
 };
