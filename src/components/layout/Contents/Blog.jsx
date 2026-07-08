@@ -5,7 +5,7 @@ import BlogNews from './BlogNews'
 
 const Blog = () => {
   return (
-    <section className='mt-25 bg-[#F7F5EE] mb-25 pt-22.75 pb-25.5'>
+    <section className='mt-25 bg-[#F7F5EE] pt-22.75 pb-25.5'>
         <Container>
             <div className="flex justify-between items-center">
            <Titles name="latest blog" />

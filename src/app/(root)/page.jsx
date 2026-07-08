@@ -1,5 +1,6 @@
 import Blog from "@/components/layout/Contents/Blog";
 import Category from "@/components/layout/Contents/Category";
+import Contact from "@/components/layout/Contents/Contact";
 import Dsicount from "@/components/layout/Contents/Dsicount";
 import Priviliges from "@/components/layout/Contents/Priviliges";
 import Products from "@/components/layout/Contents/Products";
@@ -20,6 +21,7 @@ const page = () => {
      <TopSelling/>
      <Dsicount/>
      <Blog/>
+     <Contact/>
     </>
   );
 };
