@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Menu, X, User, Facebook, Twitter, Instagram } from "lucide-react";
+import Logo from "@/components/common/Logo";
 
 const mainLinks = [
   { label: "Home", href: "/" },
@@ -48,21 +49,24 @@ const HeaderMenu = () => {
 
       <SheetContent
         side="left"
-        className="w-[85vw] max-w-sm bg-secondary text-white border-none p-0 flex flex-col [&>button]:hidden"
+        className="w-[85vw] max-w-sm bg-[#FAF3E1] text-[#1E2B12] border-none p-0 flex flex-col [&>button]:hidden"
       >
         {/* Header */}
-        <SheetHeader className="flex-row items-center justify-between px-6 py-6 border-b border-white/15">
+        <SheetHeader className="flex-row items-center justify-between px-6 py-6 border-b border-[#1E2B12]/15 bg-[#5C7A2E]">
           <SheetTitle asChild>
-            <Link href="/" className="text-xl font-medium tracking-wide text-white">
-              UOMO
+            <Link
+              href="/"
+              className="text-xl font-medium tracking-wide text-[#1E2B12]"
+            >
+              <Logo/>
             </Link>
           </SheetTitle>
           <SheetClose asChild>
             <button
               aria-label="Close menu"
-              className="cursor-pointer p-1 transition-opacity hover:opacity-70"
+              className="cursor-pointer p-1 text-[#1E2B12] transition-opacity hover:opacity-60"
             >
-              <X size={20} color="white" strokeWidth={1.5} />
+              <X size={20} strokeWidth={1.5} />
             </button>
           </SheetClose>
         </SheetHeader>
@@ -75,7 +79,7 @@ const HeaderMenu = () => {
                 <SheetClose asChild>
                   <Link
                     href={link.href}
-                    className="block py-3 text-sm uppercase tracking-wider text-white transition-colors hover:text-white/70"
+                    className="block py-3 text-sm uppercase tracking-wider text-[#1E2B12] transition-colors hover:text-[#5C7A2E]"
                   >
                     {link.label}
                   </Link>
@@ -87,18 +91,18 @@ const HeaderMenu = () => {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="shop" className="border-none">
               <AccordionTrigger
-                className="py-3 text-sm uppercase tracking-wider text-white! hover:no-underline hover:text-white/70! [&>svg]:text-white [&>svg]:opacity-100"
+                className="py-3 text-sm uppercase tracking-wider text-[#1E2B12]! hover:no-underline hover:text-[#5C7A2E]! [&>svg]:text-[#1E2B12] [&>svg]:opacity-100"
               >
                 Shop
               </AccordionTrigger>
-              <AccordionContent className="text-white">
+              <AccordionContent className="text-[#1E2B12]">
                 <ul className="flex flex-col gap-1 pl-4">
                   {shopLinks.map((link) => (
                     <li key={link.href}>
                       <SheetClose asChild>
                         <Link
                           href={link.href}
-                          className="block py-2.5 text-sm text-white/80 transition-colors hover:text-white"
+                          className="block py-2.5 text-sm text-[#1E2B12]/70 transition-colors hover:text-[#1E2B12]"
                         >
                           {link.label}
                         </Link>
@@ -116,7 +120,7 @@ const HeaderMenu = () => {
                 <SheetClose asChild>
                   <Link
                     href={link.href}
-                    className="block py-3 text-sm uppercase tracking-wider text-white transition-colors hover:text-white/70"
+                    className="block py-3 text-sm uppercase tracking-wider text-[#1E2B12] transition-colors hover:text-[#5C7A2E]"
                   >
                     {link.label}
                   </Link>
@@ -127,11 +131,11 @@ const HeaderMenu = () => {
         </nav>
 
         {/* Account */}
-        <div className="px-6 py-4 border-t border-white/15">
+        <div className="px-6 py-4 border-t border-[#1E2B12]/15">
           <SheetClose asChild>
             <Link
               href="/account"
-              className="flex items-center gap-2 text-sm uppercase tracking-wider text-white transition-colors hover:text-white/70"
+              className="flex items-center gap-2 text-sm uppercase tracking-wider text-[#1E2B12] transition-colors hover:text-[#5C7A2E]"
             >
               <User size={16} strokeWidth={1.5} />
               My Account

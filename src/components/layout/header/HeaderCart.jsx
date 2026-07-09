@@ -97,7 +97,7 @@ const HeaderCart = () => {
         </button>
       </SheetTrigger>
 
-      <SheetContent className="w-full sm:max-w-md bg-[#FBF6EE] border-none p-0 flex flex-col gap-0 [&>button]:hidden">
+      <SheetContent className="w-full sm:max-w-md bg-[#F5EDDF] border-none p-0 flex flex-col gap-0 [&>button]:hidden">
         {/* Header */}
         <SheetHeader className="flex-row items-center justify-between px-6 py-5 border-b border-[#E6D9C3] space-y-0">
           <SheetTitle className="text-sm tracking-widest uppercase font-semibold text-[#22331F]">

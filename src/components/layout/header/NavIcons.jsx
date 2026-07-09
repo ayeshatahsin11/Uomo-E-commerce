@@ -1,9 +1,8 @@
 import React from "react";
 import { UserRound } from "lucide-react";
-import { Heart } from "lucide-react";
-
 import HeaderMenu from "./HeaderMenu";
 import HeaderCart from "./HeaderCart";
+import HeaderWishlist from "./HeaderWishlist";
 
 const NavIcons = () => {
   return (
@@ -11,9 +10,7 @@ const NavIcons = () => {
       <button className="cursor-pointer">
         <UserRound size={20} color="white" />
       </button>
-      <button className="cursor-pointer">
-        <Heart size={20} color="white" />
-      </button>
+    <HeaderWishlist/>
      <HeaderCart/>
      <HeaderMenu/>
     </div>
