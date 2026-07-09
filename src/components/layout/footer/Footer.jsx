@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import Info from "./Info";
+import FooterColumns from "./FooterColumns";
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
       <Container>
         <div id="main grid part">
           <Info />
+          <FooterColumns/>
         </div>
       </Container>
     </section>
@@ -18,4 +20,3 @@ export default Footer;
 
 
 
-//ekta common design title banaba, then array baniye props pass krbo, see navbar and privilige
