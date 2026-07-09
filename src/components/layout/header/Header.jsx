@@ -6,7 +6,7 @@ const Header = () => {
   return (
    <header>
     <TopHeader/>
-    <Navbar/>
+    {/* <Navbar/> */}
    </header>
   )
 }

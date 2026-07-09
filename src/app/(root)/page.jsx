@@ -14,7 +14,7 @@ const page = () => {
   return (
     <>
       <Header />
-      <Banner/>
+      {/* <Banner/>
       <Priviliges/>
      <Products/>
      <Category/>
@@ -22,7 +22,7 @@ const page = () => {
      <Dsicount/>
      <Blog/>
      <Contact/>
-    <Footer/>
+    <Footer/> */}
     </>
   );
 };

@@ -8,7 +8,7 @@ import {
 const SearchInput = () => {
   return (
     <>
-      <div className="w-136 h-12.5 flex items-center relative">
+      <div className={`hidden md:flex w-136 h-12.5  items-center relative`}>
         <input
           type="text"
           className="w-full h-full bg-white rounded-sm  pl-5"

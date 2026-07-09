@@ -7,7 +7,7 @@ import HeaderUser from "./HeaderUser";
 
 const NavIcons = () => {
   return (
-    <div className="ml-auto flex gap-7.5">
+    <div className="hidden md:flex  ml-auto  gap-7.5">
     <HeaderUser/>
     <HeaderWishlist/>
      <HeaderCart/>
