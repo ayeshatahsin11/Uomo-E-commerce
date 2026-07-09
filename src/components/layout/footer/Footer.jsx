@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../Container";
 import Info from "./Info";
 import FooterColumns from "./FooterColumns";
+import Subscribe from "./Subscribe";
 
 const Footer = () => {
   return (
@@ -10,6 +11,7 @@ const Footer = () => {
         <div id="main grid part">
           <Info />
           <FooterColumns/>
+          <Subscribe/>
         </div>
       </Container>
     </section>
