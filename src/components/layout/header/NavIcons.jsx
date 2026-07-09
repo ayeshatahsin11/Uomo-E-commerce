@@ -1,15 +1,14 @@
 import React from "react";
-import { UserRound } from "lucide-react";
+
 import HeaderMenu from "./HeaderMenu";
 import HeaderCart from "./HeaderCart";
 import HeaderWishlist from "./HeaderWishlist";
+import HeaderUser from "./HeaderUser";
 
 const NavIcons = () => {
   return (
     <div className="ml-auto flex gap-7.5">
-      <button className="cursor-pointer">
-        <UserRound size={20} color="white" />
-      </button>
+    <HeaderUser/>
     <HeaderWishlist/>
      <HeaderCart/>
      <HeaderMenu/>

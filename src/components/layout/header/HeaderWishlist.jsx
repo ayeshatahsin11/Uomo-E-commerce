@@ -63,7 +63,7 @@ const HeaderWishlist = () => {
         </button>
       </SheetTrigger>
 
-      <SheetContent className="w-full sm:max-w-md bg-[#D4BCA3] border-none p-0 flex flex-col gap-0 [&>button]:hidden">
+      <SheetContent side="left" className="w-full sm:max-w-md bg-[#D4BCA3] border-none p-0 flex flex-col gap-0 [&>button]:hidden">
         {/* Header */}
         <SheetHeader className="flex-row items-center justify-between px-6 py-5 border-b border-[#1E2B12]/15 space-y-0">
           <SheetTitle className="text-sm tracking-widest uppercase font-semibold text-[#1E2B12]">
