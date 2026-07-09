@@ -12,7 +12,6 @@ promotions, and much more!</p>
     <input type="email" name="email" id="email" placeholder='Your Email Address' className='w-82.5 h-16 pl-5 bg-white text-primary-black! placeholder:text-primary-black' />
     <button className='uppercase font-medium text-primary-black absolute top-5 right-5 cursor-pointer'>Join</button>
    </div>
-    </div>
     <div id='download' className='flex items-center gap-12.5 mt-7'>
 
         <div className='flex max-w-33.75 items-center gap-3'>
@@ -37,6 +36,7 @@ promotions, and much more!</p>
             <h2>Get it on Google Play</h2>
         </div>
 
+    </div>
     </div>
    </>
   )

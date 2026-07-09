@@ -6,12 +6,12 @@ import Subscribe from "./Subscribe";
 
 const Footer = () => {
   return (
-    <section className="bg-secondary text-white mb-25">
+    <section className="bg-secondary text-white pt-26 pb-43">
       <Container>
-        <div id="main grid part">
+        <div id="main grid part" className="flex justify-between">
           <Info />
-          <FooterColumns/>
-          <Subscribe/>
+          <FooterColumns />
+          <Subscribe />
         </div>
       </Container>
     </section>
@@ -19,6 +19,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
