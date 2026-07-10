@@ -14,8 +14,8 @@ const page = () => {
   return (
     <>
       <Header />
-      {/* <Banner/>
-      <Priviliges/>
+      <Banner/>
+      {/* <Priviliges/>
      <Products/>
      <Category/>
      <TopSelling/>
