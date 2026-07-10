@@ -39,7 +39,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className="bg-primary pt-4.25 pb-3.75">
+      <nav className="hidden md:block bg-primary pt-4.25 pb-3.75">
         <Container>
           <ul className="flex text-white gap-11">
             {navData?.map((navlist) => (
@@ -58,4 +58,4 @@ const Navbar = () => {
 
 export default Navbar;
 
-<nav>okidfgidfygdf gidfg</nav>;
+
