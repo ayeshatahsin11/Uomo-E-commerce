@@ -17,7 +17,7 @@ const Banner = () => {
       <section
         id="banner"
         style={{ background: `url(${BannerImg.src})` }}
-        className="h-auto relative"
+        className="h-auto relative pb-10 md:pb-0"
       >
         <Container>
           <Swiper
@@ -54,37 +54,13 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            {/* <SwiperSlide>
-              <div className="flex justify-between pt-[124px] pb-[107px]">
-                <div>
-                  <h5 className=" pl-13.25 mt-13 relative font-medium text-sm text-primary leading-6 uppercase after::content-[''] after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
-                    shop our freshest
-                  </h5>
-                  <h2 className="font-bold text-secondary text-[50px] leading-15 mt-2.75">
-                    Fresh Hand-Picked Vegetables{" "}
-                    <span className="text-primary">Everyday</span>
-                  </h2>
-                   <button className="font-medium mt-5! text-primary-black text-sm leading-6 cursor-pointer uppercase relative after:content-[''] after:w-0 hover:after:w-28 after:h-0.5 after:bg-primary-black after:absolute after:-bottom-1 after:left-0 after:duration-300">
-                    <Link href="#">Discover more</Link>
-                  </button>
-                </div>
-                <div>
-                  <Image
-                    src={BannerItem}
-                    alt="banner-item"
-                    width={518}
-                    height={329}
-                  />
-                </div>
-              </div>
-            </SwiperSlide>
             <SwiperSlide>
-              <div className="flex justify-between pt-31 pb-26.75">
+              <div className="flex  justify-between pt-5 md:pt-31 pb-26.75">
                 <div>
-                  <h5 className=" pl-13.25 mt-13 relative font-medium text-sm text-primary leading-6 uppercase after::content-[''] after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
+                  <h5 className="pl-10 md:pl-13.25 mt-13  relative font-medium text-[13px] md:text-sm text-primary leading-6 uppercase after::content-[''] after:w-8 md:after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
                     shop our freshest
                   </h5>
-                  <h2 className="font-bold text-secondary text-[50px] leading-15 mt-2.75">
+                  <h2 className="font-bold text-secondary text-[30px] md:text-[50px] leading-10 md:leading-15 mt-2.75">
                     Fresh Hand-Picked Vegetables{" "}
                     <span className="text-primary">Everyday</span>
                   </h2>
@@ -96,6 +72,7 @@ const Banner = () => {
                   <Image
                     src={BannerItem}
                     alt="banner-item"
+                    className="mt-33 sm:mt-20 md:mt-0"
                     width={518}
                     height={329}
                   />
@@ -103,12 +80,12 @@ const Banner = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex justify-between pt-[124px] pb-[107px]">
+              <div className="flex  justify-between pt-5 md:pt-31 pb-26.75">
                 <div>
-                  <h5 className=" pl-13.25 mt-13 relative font-medium text-sm text-primary leading-6 uppercase after::content-[''] after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
+                  <h5 className="pl-10 md:pl-13.25 mt-13  relative font-medium text-[13px] md:text-sm text-primary leading-6 uppercase after::content-[''] after:w-8 md:after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
                     shop our freshest
                   </h5>
-                  <h2 className="font-bold text-secondary text-[50px] leading-15 mt-2.75">
+                  <h2 className="font-bold text-secondary text-[30px] md:text-[50px] leading-10 md:leading-15 mt-2.75">
                     Fresh Hand-Picked Vegetables{" "}
                     <span className="text-primary">Everyday</span>
                   </h2>
@@ -120,17 +97,43 @@ const Banner = () => {
                   <Image
                     src={BannerItem}
                     alt="banner-item"
+                    className="mt-33 sm:mt-20 md:mt-0"
                     width={518}
                     height={329}
                   />
                 </div>
               </div>
-            </SwiperSlide> */}
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex  justify-between pt-5 md:pt-31 pb-26.75">
+                <div>
+                  <h5 className="pl-10 md:pl-13.25 mt-13  relative font-medium text-[13px] md:text-sm text-primary leading-6 uppercase after::content-[''] after:w-8 md:after:w-10 after:h-0.5 after:bg-primary after:absolute after:top-2/4 after:translate-y-[-50%] after:left-0">
+                    shop our freshest
+                  </h5>
+                  <h2 className="font-bold text-secondary text-[30px] md:text-[50px] leading-10 md:leading-15 mt-2.75">
+                    Fresh Hand-Picked Vegetables{" "}
+                    <span className="text-primary">Everyday</span>
+                  </h2>
+                  <button className="font-medium mt-5! text-primary-black text-sm leading-6 cursor-pointer uppercase relative after:content-[''] after:w-0 hover:after:w-28 after:h-0.5 after:bg-primary-black after:absolute after:-bottom-1 after:left-0 after:duration-300">
+                    <Link href="#">Discover more</Link>
+                  </button>
+                </div>
+                <div>
+                  <Image
+                    src={BannerItem}
+                    alt="banner-item"
+                    className="mt-33 sm:mt-20 md:mt-0"
+                    width={518}
+                    height={329}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
-          <button className="custom-prev cursor-pointer rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] left-15.25">
+          <button className="custom-prev cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute bottom-4 left-2 md:top-2/4 md:translate-y-[-50%] md:left-15.25 ">
             <ChevronLeft />
           </button>
-          <button className="custom-next cursor-pointer rounded-full size-11.25 bg-white flex justify-center items-center absolute top-2/4 translate-y-[-50%] right-15.25">
+          <button className="custom-next cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute bottom-4 left-15 md:top-2/4 md:translate-y-[-50%] md:right-15.25 ">
             <ChevronRight />
           </button>
         </Container>

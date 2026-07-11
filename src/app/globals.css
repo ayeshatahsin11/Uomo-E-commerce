@@ -154,7 +154,7 @@
     @apply flex gap-7! h-10! left-[35%]! bottom-0!;
   }
   #topselling .swiper-wrapper{
-    @apply pb-25!
+    @apply md:pb-25! 
   }
   .star-svg {
     @apply text-[#EEBA36]! inline-block!;
