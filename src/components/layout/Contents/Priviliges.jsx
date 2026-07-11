@@ -106,9 +106,9 @@ const Priviliges = () => {
 
   return (
     <>
-      <section className="bg-[#F7F5EE] py-13.5">
+      <section className="bg-[#F7F5EE] py-10 md:py-13.5">
         <Container>
-          <div className="flex justify-between">
+          <div className="grid grid-cols-2 gap-5 md:gap-0 md:grid-cols-4 justify-between">
             {privilegeData.map((item) => (
               <PriviligeCards
                 key={item.id}
