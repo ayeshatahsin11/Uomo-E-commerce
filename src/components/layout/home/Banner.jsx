@@ -130,10 +130,10 @@ const Banner = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          <button className="custom-prev cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute bottom-4 left-2 md:top-2/4 md:translate-y-[-50%] md:left-15.25 ">
+          <button className="custom-prev cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute  bottom-4 left-4  md:top-2/4 md:translate-y-[-50%] md:left-15.25! ">
             <ChevronLeft />
           </button>
-          <button className="custom-next cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute bottom-4 left-15 md:top-2/4 md:translate-y-[-50%] md:right-15.25 ">
+          <button className="custom-next cursor-pointer rounded-full z-50 size-5 md:size-11.25 bg-white flex justify-center items-center absolute bottom-4 right-60 md:top-2/4 md:translate-y-[-50%] md:right-15.25! ">
             <ChevronRight />
           </button>
         </Container>
@@ -143,3 +143,4 @@ const Banner = () => {
 };
 
 export default Banner;
+
