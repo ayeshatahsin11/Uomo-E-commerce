@@ -16,8 +16,8 @@ const page = () => {
       <Header />
       <Banner/>
       <Priviliges/>
-     {/* <Products/>
-     <Category/>
+     <Products/>
+     {/* <Category/>
      <TopSelling/>
      <Dsicount/>
      <Blog/>

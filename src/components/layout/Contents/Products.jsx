@@ -6,7 +6,7 @@ import Nav_Tabs from '@/components/common/Nav&Tabs'
 const Products = () => {
   return (
    <>
-    <section className='mt-24.25 mb-25'>
+    <section className='mt-10 md:mt-24.25 mb-25'>
         <Container className="relative">
          
              <Titles name="featured products"/>
