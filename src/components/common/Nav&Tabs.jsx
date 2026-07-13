@@ -20,7 +20,7 @@ const Nav_Tabs = () => {
   return (
     <>
       <Tabs defaultValue="Best Sellers">
-        <div className="absolute top-2.75 right-0">
+        <div className="absolute top-2.75 md:right-0">
           <TabsList
             className="mb-5 md:mb-0 mt-10 md:mt-0 flex-wrap justify-start!"
             variant="line"
