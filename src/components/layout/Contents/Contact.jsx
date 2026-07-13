@@ -3,10 +3,10 @@ import Container from "../Container";
 
 const Contact = () => {
   return (
-    <section className="bg-primary pt-21 pb-20">
+    <section className="bg-primary py-10 md:pt-21 md:pb-20">
       <Container>
-        <div className="flex justify-between items-center">
-          <div className="flex gap-7 items-center">
+        <div className="md:flex justify-between items-center">
+          <div className="flex gap-5 md:gap-7 items-center">
             <svg
               width="53"
               height="53"
@@ -19,12 +19,12 @@ const Contact = () => {
                 fill="white"
               />
             </svg>
-            <h3 className="text-white text-[26px]">
+            <h3 className="text-white text-[20px] md:text-[26px]">
               Whatsapp Ordering Service
             </h3>
           </div>
 
-          <h2 className="text-white capitalize text-[26px]">
+          <h2 className="text-white capitalize mt-3 md:mt-0 ml-6 md:ml-0 text-[18px] md:text-[26px]">
             Place your order at{" "}
             <span className="text-secondary">+1 246-345-0695</span>{" "}
           </h2>

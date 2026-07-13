@@ -21,8 +21,8 @@ const page = () => {
      <TopSelling/>
      <Dsicount/>
      <Blog/>
-     {/* <Contact/>
-    <Footer/> */}
+     <Contact/>
+    {/* <Footer/> */}
     </>
   );
 };
