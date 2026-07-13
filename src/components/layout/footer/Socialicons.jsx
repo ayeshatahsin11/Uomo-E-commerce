@@ -100,7 +100,7 @@ const Socialicons = () => {
     },
   ];
   return (
-    <div className="flex gap-9 mt-12">
+    <div className="flex gap-9 mt-5 md:mt-12">
       {footerIcons?.map((item) => (
         <div key={item.id}>
           <button className="cursor-pointer">

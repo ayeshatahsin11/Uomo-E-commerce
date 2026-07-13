@@ -4,9 +4,9 @@ import React from 'react'
 const Subscribe = () => {
   return (
    <>
-    <div className=' max-w-82.5'>
+    <div className=' max-w-82.5 mt-10 md:mt-0'>
         <h2 className='text-[18px] font=medium uppercase text-white'>subscribe</h2>
-        <p className='text-sm leading-6 mt-7 text-white'>Be the first to get the latest news about trends,
+        <p className='text-sm md:leading-6 mt-3 md:mt-7 text-white'>Be the first to get the latest news about trends,
 promotions, and much more!</p>
    <div className='relative mt-8'>
     <input type="email" name="email" id="email" placeholder='Your Email Address' className='w-82.5 h-16 pl-5 bg-white text-primary-black! placeholder:text-primary-black' />

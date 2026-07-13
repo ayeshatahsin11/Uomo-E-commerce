@@ -6,9 +6,9 @@ import Subscribe from "./Subscribe";
 
 const Footer = () => {
   return (
-    <section className="bg-secondary text-white pt-26 pb-43">
+    <section className="bg-secondary text-white py-15 md:pt-26 md:pb-43">
       <Container>
-        <div id="main grid part" className="flex justify-between">
+        <div id="main grid part" className="md:flex justify-between">
           <Info />
           <FooterColumns />
           <Subscribe />

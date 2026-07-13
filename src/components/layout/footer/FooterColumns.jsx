@@ -39,7 +39,7 @@ const FooterColumns = () => {
   },
 ];
   return (
-    <div className='flex gap-42'>
+    <div className='flex flex-col md:flex-row gap-y-10 md:gap-y-0 gap-42 mt-10 md:mt-0'>
         {
         footerData?.map((item)=>(
             <ColumnDesgin
