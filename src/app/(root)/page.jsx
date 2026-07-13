@@ -20,8 +20,8 @@ const page = () => {
      <Category/>
      <TopSelling/>
      <Dsicount/>
-     {/* <Blog/>
-     <Contact/>
+     <Blog/>
+     {/* <Contact/>
     <Footer/> */}
     </>
   );

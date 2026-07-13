@@ -18,24 +18,24 @@ const BlogNews = () => {
   return (
     <>
       <Container>
-        <div className="flex gap-7.5 mt-8.5">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-4 md:gap-7.5 mt-8.5">
           {blog?.map((item) => (
-            <div key={item.id} className="w-82.5 h-auto bg-white">
-              <div className="relative w-82.5 h-55 overflow-hidden">
+            <div key={item.id} className="md:w-82.5 h-auto bg-white">
+              <div className="relative md:w-82.5 h-55 overflow-hidden">
                 <Image
                   src={item?.image}
                   alt={item.about}
                   fill
                   sizes="330px"
-                  className="object-contain cursor-pointer"
+                  className="object-cover md:object-contain cursor-pointer"
                 />
               </div>
               <div className="pt-6  pb-5 pl-7.75 pr-15">
-                <div className="flex gap-6.5 text-sm text-primary-gray leading-6 mt-6 uppercase">
+                <div className="md:flex gap-6.5 text-[12px] md:text-sm text-primary-gray md:leading-6 md:mt-6 uppercase">
                   <h3>By {item?.author}</h3>
                   <h4>{item?.date}</h4>
                 </div>
-                <h2 className="text-[18px] text-primary-black mt-1">
+                <h2 className="text-sm md:text-[18px] text-primary-black mt-1">
                   {item?.about}
                 </h2>
               </div>
