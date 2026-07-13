@@ -27,7 +27,7 @@ const DiscountProducts = () => {
     <>
       <section>
         <Container>
-          <div className="w-281 -mt-9 relative">
+          <div className="w-281 mt-5 md:mt-0 relative">
             <Swiper
               slidesPerView={4}
               modules={[Navigation]}
