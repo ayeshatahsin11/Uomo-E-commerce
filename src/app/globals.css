@@ -143,20 +143,45 @@
   #banner .swiper-pagination {
     @apply flex gap-7! h-10! left-2.5!;
   }
-  #topselling .swiper-pagination-bullet {
-    @apply size-1.5! rounded-full opacity-100! bg-[#DDC2B9]!;
-  }
-  #topselling .swiper-pagination-bullet-active {
-    @apply size-1.5!  rounded-full bg-primary-black! relative after:content-[''] after:size-7.5 after:border-2 after:rounded-full after:absolute after:-translate-x-1/2 after:-translate-y-1/2 after:top-2/4 after:left-2/4;
-  }
+ #topselling .swiper-pagination-bullet {
+  @apply size-1! md:size-1.5! rounded-full opacity-100! bg-[#DDC2B9]!;
+}
 
+#topselling .swiper-pagination-bullet-active {
+  @apply size-1! md:size-1.5! rounded-full bg-primary-black! relative after:content-[''] after:size-5 md:after:size-7.5 after:border-2 after:rounded-full after:absolute after:-translate-x-1/2 after:-translate-y-1/2 after:top-2/4 after:left-2/4;
+}
+
+/* Base (mobile-first) pagination position - age eta missing chilo tai mobile e overlap/misplace hocchilo */
+#topselling .swiper-pagination {
+  @apply flex! gap-3! h-10! justify-center! left-0! right-0! -bottom-3! w-full!;
+}
+
+/* Tablet */
+@screen sm {
   #topselling .swiper-pagination {
-    @apply flex gap-7! h-10! left-[35%]! bottom-0!;
+    @apply gap-5! left-0! w-full!;
   }
-  #topselling .swiper-wrapper{
-    @apply md:pb-25! 
+}
+
+/* Desktop - tomar original design (35% left, gap-7) eikhane apply hobe */
+@screen md {
+  #topselling .swiper-pagination {
+    @apply gap-7! h-10! left-[35%]! w-auto! bottom-0!;
   }
+}
+
+#topselling .swiper-wrapper {
+  @apply pb-16!;
+}
+
+@screen md {
+  #topselling .swiper-wrapper {
+    @apply pb-25!;
+  }
+}
   .star-svg {
     @apply text-[#EEBA36]! inline-block!;
   }
 }
+
+

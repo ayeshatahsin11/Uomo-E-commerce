@@ -18,8 +18,8 @@ const page = () => {
       <Priviliges/>
      <Products/>
      <Category/>
-     {/* <TopSelling/>
-     <Dsicount/>
+     <TopSelling/>
+     {/* <Dsicount/>
      <Blog/>
      <Contact/>
     <Footer/> */}
