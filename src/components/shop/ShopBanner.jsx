@@ -40,7 +40,7 @@ const ShopBanner = () => {
         }
     ]
   return (
-    <div className='w-full py-40 bg-no-repeat! bg-cover! bg-center! mb-25 flex flex-col justify-center items-center'
+    <div className=' py-40 mx-15 bg-no-repeat! bg-cover! bg-center!  flex flex-col justify-center items-center'
     style={{background:`url(${shopbannerImage.src})`}}
     >
     <h2 className='text-[60px] font-bold text-primary-black uppercase'>naturally fresh</h2>
