@@ -56,12 +56,13 @@ const SortandView = ({
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-b border-gray-200">
+    <div className="flex flex-wrap items-center justify-between gap-7.5 py-4">
       {/* Sorting Dropdown */}
       <NativeSelect
         value={currentSort}
         onChange={handleSortChange}
-        className="w-fit min-w-48 text-xs md:text-sm uppercase tracking-wide font-medium border-none bg-transparent focus:outline-none cursor-pointer"
+        selectClassName={`border-none! uppercase text-primary-black font-medium  leading-6 cursor-pointer w-40.5 `}
+        className={`relative after:content-[''] after:w-0 hover:after:w-35 after:h-0.75 after:bg-primary-black after:absolute after:bottom-0 after:left-2.5 after:duration-300`}
       >
         <NativeSelectOptGroup label="Sort Products">
           {sortOptions.map((option) => (
@@ -71,10 +72,14 @@ const SortandView = ({
           ))}
         </NativeSelectOptGroup>
       </NativeSelect>
+     
+     {/* // empty div */}
+     <div className="w-0.5 h-5.5 bg-[#E4E4E4]"></div>
 
       {/* View / Grid Toggle */}
       <div className="hidden sm:flex items-center gap-3 text-xs md:text-sm uppercase tracking-wide">
-        <span className="opacity-60 font-medium">View</span>
+        
+        <span className="text-primary-black! font-medium ">View</span>
         <div className="flex items-center gap-3">
           {viewOptions.map((option) => (
             <button
@@ -84,8 +89,8 @@ const SortandView = ({
               aria-label={`${option.value} column view`}
               className={`pb-1 border-b-2 duration-200 cursor-pointer ${
                 currentGrid === option.value
-                  ? "border-primary opacity-100 font-semibold"
-                  : "border-transparent opacity-50 hover:opacity-80"
+                  ? "border-primary-black opacity-100 font-semibold"
+                  : "border-transparent opacity-60 hover:opacity-80"
               }`}
             >
               {option.value}
