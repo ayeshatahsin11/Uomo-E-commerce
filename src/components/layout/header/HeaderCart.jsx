@@ -152,7 +152,7 @@ const HeaderCart = () => {
                     ${item.pricePerKg.toFixed(2)} / kg
                   </p>
 
-                  <div className="flex items-center justify-between mt-3">
+                  <div className="md:flex items-center justify-between mt-3">
                     <div className="flex items-center gap-3 border border-[#E6D9C3] rounded-full px-2.5 py-1">
                       <button
                         aria-label="Decrease weight"
@@ -173,7 +173,7 @@ const HeaderCart = () => {
                         <Plus size={12} strokeWidth={2} />
                       </button>
                     </div>
-                    <span className="text-sm font-medium text-[#22331F]">
+                    <span className="text-sm  font-medium text-[#22331F]">
                       ${getItemPrice(item).toFixed(2)}
                     </span>
                   </div>
