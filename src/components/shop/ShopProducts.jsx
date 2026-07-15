@@ -24,7 +24,6 @@ const ShopProducts = () => {
     fetchProducts();
   }, []);
 
-  // Sorting logic ekhon ei component e, product jekhane render hocche thikei
   const sortedProducts = [...products].sort((a, b) => {
     switch (sortValue) {
       case "price_low_high":
@@ -41,16 +40,15 @@ const ShopProducts = () => {
   });
 
   return (
-    // <div className={`grid ${gridColsMap[gridView]} gap-x-6 gap-y-5 mt-10`}>
-    //   {sortedProducts?.map((product) => (
-    //     <ProductCards key={product.id} product={product} />
-    //   ))}
-    // </div>
-    <>
-    <Paginate/>
-    </>
+    <Paginate
+      items={sortedProducts}
+      itemsPerPage={8}
+      wrapperClassName={`grid ${gridColsMap[gridView]} gap-x-6 gap-y-5 mt-10`}
+      renderItem={(product) => (
+        <ProductCards key={product.id} product={product} />
+      )}
+    />
   );
 };
 
 export default ShopProducts;
-

@@ -1,57 +1,76 @@
-"use client"
-import ReactPaginate from 'react-paginate';
-import React, { useEffect, useState } from 'react';
+"use client";
+import ReactPaginate from "react-paginate";
+import React, { useState, useEffect, useRef } from "react";
 
-const Paginate = ({itemsPerPage}) => {
-    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-      // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
+const Paginate = ({
+  items = [],
+  itemsPerPage = 8,
+  renderItem,
+  wrapperClassName = "",
+}) => {
   const [itemOffset, setItemOffset] = useState(0);
+  const sectionRef = useRef(null); // product grid er top ke target korbo
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
+  useEffect(() => {
+    setItemOffset(0);
+  }, [items]);
+
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
     setItemOffset(newOffset);
+
+    // document top er bodole, ei component er nijer top e scroll hobe
+    // (mane hero banner na dekhiye, sorasori "sort/view bar" ba grid er top e niye jabe)
+    if (sectionRef.current) {
+      const yOffset = -100; // fixed header er height baad dewar jonno, offset adjust koro
+      const y =
+        sectionRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
-    function Items({ currentItems }) {
+
+  if (!items.length) {
+    return (
+      <p className="text-sm text-gray-500 text-center py-10">
+        No products found.
+      </p>
+    );
+  }
+
   return (
-    <>
-      {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
-    </>
-  );
-}
-  return (
-    <div>
-          <Items currentItems={currentItems} />
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      />
+    <div ref={sectionRef}>
+      <div className={wrapperClassName}>
+        {currentItems.map((item) => renderItem(item))}
+      </div>
+
+      {pageCount > 1 && (
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="Next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={3}
+          marginPagesDisplayed={1}
+          pageCount={pageCount}
+          previousLabel="< Previous"
+          renderOnZeroPageCount={null}
+          forcePage={itemOffset / itemsPerPage}
+          className="flex items-center justify-center gap-4 mt-10 text-sm"
+          pageLinkClassName="size-9 flex items-center justify-center rounded-full bg-[#F5EDDF] text-secondary  border border-gray-300 hover:bg-gray-100 duration-200 cursor-pointer"
+          activeLinkClassName="!bg-secondary !text-[#F5EDDF] !border-[#22331F]"
+          previousLinkClassName="px-3 py-2 border border-gray-300 bg-[#F5EDDF] text-secondary font-bold  rounded-full hover:bg-gray-100 duration-200 cursor-pointer"
+          nextLinkClassName="px-3 py-2 border border-gray-300 bg-[#F5EDDF] text-secondary font-bold rounded-full hover:bg-gray-100 duration-200 cursor-pointer"
+          breakLinkClassName="px-2"
+          disabledLinkClassName="opacity-60 cursor-not-allowed!"
+        />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Paginate
-
-
+export default Paginate;
