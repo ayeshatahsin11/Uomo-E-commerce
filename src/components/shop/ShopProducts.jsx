@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCards from "../common/ProductCards";
 import { useShopStore } from "@/store/useShopStore";
+import Paginate from "./Paginate";
 
 const gridColsMap = {
   2: "grid-cols-2",
@@ -40,12 +41,16 @@ const ShopProducts = () => {
   });
 
   return (
-    <div className={`grid ${gridColsMap[gridView]} gap-x-6 gap-y-5 mt-10`}>
-      {sortedProducts?.map((product) => (
-        <ProductCards key={product.id} product={product} />
-      ))}
-    </div>
+    // <div className={`grid ${gridColsMap[gridView]} gap-x-6 gap-y-5 mt-10`}>
+    //   {sortedProducts?.map((product) => (
+    //     <ProductCards key={product.id} product={product} />
+    //   ))}
+    // </div>
+    <>
+    <Paginate/>
+    </>
   );
 };
 
 export default ShopProducts;
+
