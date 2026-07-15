@@ -8,9 +8,9 @@ import ShopSidebar from "./ShopSidebar";
 const ShopLayout = () => {
   return (
     <div className="mt-9 mb-5">
-      <Container className="flex gap-15 items-center">
-        <ShopSidebar />
-        <div className="w-full -mt-25!">
+      <Container className="flex gap-15 items-start">
+        <ShopSidebar className="sticky top-6" />
+        <div className="w-full">
           <div className="items-center flex justify-between">
             <Breadcrumb
               items={[
