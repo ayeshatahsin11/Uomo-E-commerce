@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
 } from "@/components/ui/native-select";
-import { Grid2X2, Grid3X3, LayoutGrid } from "lucide-react";
+import { useShopStore } from "@/store/useShopStore";
 
 const sortOptions = [
   { value: "default", label: "Default Sorting" },
@@ -18,52 +18,22 @@ const sortOptions = [
   { value: "name_z_a", label: "Name: Z to A" },
 ];
 
-// gridView mane sidebar soho total column (sidebar = 1 column dhora hoy)
-const viewOptions = [
-  { value: 2, icon: LayoutGrid },
-  { value: 3, icon: Grid2X2 },
-  { value: 4, icon: Grid3X3 },
-];
+const viewOptions = [2, 3, 4];
 
-const SortandView = ({
-  sortValue,
-  onSortChange,
-  gridView,
-  onGridViewChange,
-}) => {
-  // Jodi parent theke controlled prop na ashe, internal state diye fallback
-  const [internalSort, setInternalSort] = useState("default");
-  const [internalGrid, setInternalGrid] = useState(4);
-
-  const currentSort = sortValue ?? internalSort;
-  const currentGrid = gridView ?? internalGrid;
-
-  const handleSortChange = (e) => {
-    const value = e.target.value;
-    if (onSortChange) {
-      onSortChange(value);
-    } else {
-      setInternalSort(value);
-    }
-  };
-
-  const handleGridChange = (value) => {
-    if (onGridViewChange) {
-      onGridViewChange(value);
-    } else {
-      setInternalGrid(value);
-    }
-  };
+const SortandView = () => {
+  const sortValue = useShopStore((state) => state.sortValue);
+  const setSortValue = useShopStore((state) => state.setSortValue);
+  const gridView = useShopStore((state) => state.gridView);
+  const setGridView = useShopStore((state) => state.setGridView);
 
   return (
     <div className="flex flex-wrap items-center justify-between gap-7.5 py-4">
       {/* Sorting Dropdown */}
       <NativeSelect
-        value={currentSort}
-        onChange={handleSortChange}
-        selectClassName={`border-none! uppercase text-primary-black font-medium  leading-6 cursor-pointer w-40.5 `}
-        className={`relative after:content-[''] after:w-0 hover:after:w-35 after:h-0.75 after:bg-primary-black after:absolute after:bottom-0 after:left-2.5 after:duration-300`}
-      >
+        value={sortValue}
+        onChange={(e) => setSortValue(e.target.value)}
+        selectClassName={`border-none! uppercase text-primary-black font-medium w-40.5 cursor-pointer`}
+        >
         <NativeSelectOptGroup label="Sort Products">
           {sortOptions.map((option) => (
             <NativeSelectOption key={option.value} value={option.value}>
@@ -72,28 +42,29 @@ const SortandView = ({
           ))}
         </NativeSelectOptGroup>
       </NativeSelect>
-     
-     {/* // empty div */}
-     <div className="w-0.5 h-5.5 bg-[#E4E4E4]"></div>
+  
 
+{/* empty div */}
+<div className="w-0.5 h-5.5 bg-[#E4E4E4]">
+
+</div>
       {/* View / Grid Toggle */}
       <div className="hidden sm:flex items-center gap-3 text-xs md:text-sm uppercase tracking-wide">
-        
-        <span className="text-primary-black! font-medium ">View</span>
+        <span className="text-primary-black font-medium">View</span>
         <div className="flex items-center gap-3">
-          {viewOptions.map((option) => (
+          {viewOptions.map((value) => (
             <button
-              key={option.value}
+              key={value}
               type="button"
-              onClick={() => handleGridChange(option.value)}
-              aria-label={`${option.value} column view`}
+              onClick={() => setGridView(value)}
+              aria-label={`${value} column view`}
               className={`pb-1 border-b-2 duration-200 cursor-pointer ${
-                currentGrid === option.value
+                gridView === value
                   ? "border-primary-black opacity-100 font-semibold"
                   : "border-transparent opacity-60 hover:opacity-80"
               }`}
             >
-              {option.value}
+              {value}
             </button>
           ))}
         </div>

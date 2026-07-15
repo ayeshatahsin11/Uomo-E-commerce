@@ -8,9 +8,9 @@ const ProductCards = ({ product }) => {
    <div className="">
      <div
       key={product.id}
-      className="relative md:w-63.75  border group border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 "
+      className="relative w-full  border group border-#E4E4E4 rounded-lg overflow-hidden duration-200 hover:shadow-xl hover:shadow-black/25 "
     >
-      <div className="relative md:w-63.75 h-50 overflow-hidden">
+      <div className="relative w-full h-50 overflow-hidden">
         <Image
           src={product.image}
           alt={product.title}
