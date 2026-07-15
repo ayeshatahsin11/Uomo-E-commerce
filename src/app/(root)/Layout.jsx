@@ -1,10 +1,12 @@
 import Footer from '@/components/layout/footer/Footer'
 import Header from '@/components/layout/header/Header'
 import React from 'react'
+import ScrollTopButton from '../ScrollTop'
 
 const mainLayout = ({children}) => {
   return (
    <>
+   <ScrollTopButton/>
    <Header/>
    {children}
    <Footer/>

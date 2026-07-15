@@ -1,5 +1,5 @@
-import ShopBanner from '@/components/shop/ShopBanner'
-import ShopLayout from '@/components/shop/ShopLayout'
+import ShopBanner from '@/components/shop(contents)/ShopBanner'
+import ShopLayout from '@/components/shop(contents)/ShopLayout'
 import React from 'react'
 
 
