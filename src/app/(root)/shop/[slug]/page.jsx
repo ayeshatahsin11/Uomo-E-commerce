@@ -200,28 +200,28 @@ const ShopSingleProduct = () => {
             )}
 
             {/* Sizes */}
-            {product.sizes && (
+            {product.weights && (
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-[#22331F] tracking-wide">
-                    SIZES
+                  <span className="text-xs font-semibold text-[#22331F] tracking-wide uppercase">
+                    Weight
                   </span>
                   <button className="text-xs text-[#9A8F7A] underline hover:text-[#22331F] duration-200 cursor-pointer">
-                    Size Guide
+                    Weight Guide
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {product.sizes.map((size) => (
+                  {product.weights.map((weight) => (
                     <button
-                      key={size}
-                      onClick={() => setSelectedSize(size)}
+                      key={weight}
+                      onClick={() => setSelectedSize(weight)}
                       className={`px-3.5 py-1.5 text-xs font-medium rounded-md border duration-200 cursor-pointer ${
-                        selectedSize === size
+                        selectedSize === weight
                           ? "bg-[#22331F] border-[#22331F] text-white"
                           : "border-[#C9BFA8] text-[#4B4536] hover:border-[#22331F]"
                       }`}
                     >
-                      {size}
+                      {weight}
                     </button>
                   ))}
                 </div>

@@ -4,135 +4,228 @@
     "image": "/images/banana.jpg",
     "category": "Fruit",
     "title": "Organic Banana",
+    "description": "Naturally sweet organic bananas rich in potassium and perfect for smoothies, snacks, or breakfast.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4,
     "reviews": 323963,
-    "price": 35
+    "price": 35,
+      "colors": [
+      { "name": "Green", "hex": "#7CB342" },
+      { "name": "Yellow", "hex": "#FDD835" }
+    ]
   },
   {
     "id": 2,
     "image": "/images/kiwi.jpg",
     "category": "Fruit",
-    "title": "Fresh kiwi",
+    "title": "Fresh Kiwi",
+    "description": "Juicy, vitamin C-rich kiwis with a refreshing sweet and tangy flavor for healthy everyday eating.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4.5,
     "reviews": 258741,
-    "price": 30
+    "price": 30,
+       "colors": [
+      { "name": "Brown", "hex": "#8D6E63" },
+      { "name": "Green", "hex": "#66BB6A" },
+      { "name": "Golden", "hex": "#FBC02D" }
+    ]
   },
   {
     "id": 3,
     "image": "/images/new_strawberry.jpg",
     "category": "Fruit",
     "title": "Large Strawberry",
+    "description": "Handpicked large strawberries bursting with sweetness, perfect for desserts, smoothies, and fresh snacks.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 5,
     "reviews": 450218,
-    "price": 40
+    "price": 40,
+      "colors": [
+      { "name": "Red", "hex": "#D32F2F" },
+      { "name": "Pink", "hex": "#EC407A" }
+    ]
   },
   {
     "id": 4,
     "image": "/images/orange.jpg",
     "category": "Fruit",
     "title": "Organic Oranges",
+    "description": "Fresh organic oranges packed with vitamin C and refreshing citrus flavor for juices or healthy snacks.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 3,
     "reviews": 256841,
-    "price": 28
+    "price": 28,
+      "colors": [
+      { "name": "Orange", "hex": "#FB8C00" },
+      { "name": "Green", "hex": "#43A047" }
+    ]
   },
   {
     "id": 5,
     "image": "/images/Pomegranate.png",
     "category": "Fruit",
     "title": "Pomegranate",
+    "description": "Premium pomegranates filled with juicy ruby-red seeds, rich in antioxidants and natural goodness.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 3,
     "reviews": 198674,
-    "price": 24
+    "price": 24,
+      "colors": [
+      { "name": "Red", "hex": "#C62828" },
+      { "name": "Dark Red", "hex": "#8E0000" }
+    ]
   },
   {
     "id": 6,
     "image": "/images/tomato.jpg",
     "category": "Vegetable",
     "title": "Juicy Tomatoes",
+    "description": "Farm-fresh juicy tomatoes ideal for salads, sauces, curries, and everyday cooking.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 5,
     "reviews": 482571,
-    "price": 40
+    "price": 40,
+      "colors": [
+      { "name": "Red", "hex": "#E53935" },
+      { "name": "Green", "hex": "#43A047" },
+      { "name": "Yellow", "hex": "#FDD835" }
+    ]
   },
   {
     "id": 7,
     "image": "/images/onion.png",
     "category": "Vegetable",
     "title": "Large Onions",
+    "description": "Fresh large onions with a rich flavor that enhances every recipe from soups to stir-fries.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4.5,
     "reviews": 125874,
-    "price": 38
+    "price": 38,   "colors": [
+      { "name": "Red", "hex": "#8E24AA" },
+      { "name": "White", "hex": "#F5F5F5" },
+      { "name": "Yellow", "hex": "#D4A017" }
+    ]
   },
   {
     "id": 8,
     "image": "/images/broccoli.jpg",
     "category": "Vegetable",
     "title": "Fresh Broccoli",
+    "description": "Crisp green broccoli packed with vitamins and fiber, perfect for steaming, roasting, or stir-frying.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 3.5,
     "reviews": 156428,
-    "price": 27
+    "price": 27,
+      "colors": [
+      { "name": "Green", "hex": "#2E7D32" }
+    ]
   },
   {
     "id": 9,
     "image": "/images/Asperges.png",
     "category": "Vegetable",
     "title": "Asparagus",
+    "description": "Tender asparagus spears offering a delicate taste and loaded with essential nutrients.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 2.5,
     "reviews": 215897,
-    "price": 22
+    "price": 22,
+      "colors": [
+      { "name": "Green", "hex": "#4CAF50" },
+      { "name": "Purple", "hex": "#7B1FA2" },
+      { "name": "White", "hex": "#F5F5DC" }
+    ]
   },
   {
     "id": 10,
     "image": "/images/Cauliflower.jpg",
     "category": "Vegetable",
     "title": "Cauliflower",
+    "description": "Fresh white cauliflower with a mild flavor, great for curries, roasting, and healthy meals.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4,
     "reviews": 231589,
-    "price": 31
+    "price": 31,
+      "colors": [
+      { "name": "White", "hex": "#FAFAFA" },
+      { "name": "Purple", "hex": "#7E57C2" },
+      { "name": "Orange", "hex": "#FB8C00" },
+      { "name": "Green", "hex": "#43A047" }
+    ]
   },
   {
     "id": 11,
     "image": "/images/pumpkin.jpg",
     "category": "Vegetable",
     "title": "Pumpkin",
+    "description": "Naturally sweet pumpkin perfect for soups, curries, baking, and nutritious family meals.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 3.5,
     "reviews": 259631,
-    "price": 33
+    "price": 33,
+      "colors": [
+      { "name": "Orange", "hex": "#EF6C00" },
+      { "name": "Green", "hex": "#558B2F" },
+      { "name": "White", "hex": "#FFF8E1" }
+    ]
   },
   {
     "id": 12,
     "image": "/images/walnut.jpg",
     "category": "Nuts",
     "title": "Walnuts",
+    "description": "Premium-quality walnuts packed with healthy fats, protein, and a delicious crunchy texture.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4.5,
     "reviews": 323963,
-    "price": 40
+    "price": 40,
+      "colors": [
+      { "name": "Light Brown", "hex": "#A1887F" },
+      { "name": "Dark Brown", "hex": "#6D4C41" }
+    ]
   },
   {
     "id": 13,
     "image": "/images/almonds.jpg",
     "category": "Nuts",
     "title": "Almonds",
+    "description": "Crunchy natural almonds rich in protein, fiber, and vitamin E for a wholesome snack.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 4.5,
     "reviews": 258964,
-    "price": 38
+    "price": 38,
+     "colors": [
+      { "name": "Light Brown", "hex": "#C49A6C" },
+      { "name": "Brown", "hex": "#8D6E63" }
+    ]
   },
   {
     "id": 14,
     "image": "/images/cashews.jpg",
     "category": "Nuts",
     "title": "Cashews",
+    "description": "Creamy premium cashews with a naturally buttery taste, ideal for snacking and cooking.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 5,
     "reviews": 456985,
-    "price": 45
+    "price": 45,
+      "colors": [
+      { "name": "Cream", "hex": "#F5E6C8" }
+    ]
   },
   {
     "id": 15,
     "image": "/images/chia.jpg",
     "category": "Seeds",
     "title": "Chia Seeds",
+    "description": "Nutrient-rich chia seeds loaded with fiber, omega-3, and protein for smoothies, yogurt, and baking.",
+    "weights": ["250g", "500g", "750g", "1kg"],
     "rating": 5,
     "reviews": 236985,
-    "price": 40
+    "price": 40,
+      "colors": [
+      { "name": "Black", "hex": "#212121" },
+      { "name": "White", "hex": "#FAFAFA" }
+    ]
   }
 ]
-
