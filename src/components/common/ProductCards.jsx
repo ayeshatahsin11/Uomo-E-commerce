@@ -2,8 +2,15 @@
 import { Handbag, Eye, Heart } from "lucide-react";
 import Image from "next/image";
 import StarRating from "./StarRating";
+import { useRouter } from "next/navigation";
 
 const ProductCards = ({ product }) => {
+  
+  
+  const router = useRouter();
+  const handleProductView = ()=>{
+     router.push(`/shop/${product.id}`)
+  }
   return (
    <div className="">
      <div
@@ -21,17 +28,17 @@ const ProductCards = ({ product }) => {
       </div>
 
       <div className="absolute top-1/2 left-1/2 translate-x-[-50%] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-in-out">
-        <ul className="flex gap-2.5 justify-center">
-          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+        <div className="flex gap-2.5 justify-center">
+          <button className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
             <Handbag className="size-4" />
-          </li>
-          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+          </button>
+          <button onClick={handleProductView} className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
             <Eye className="size-4" />
-          </li>
-          <li className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
+          </button>
+          <button className="w-10 h-10 rounded-full hover:bg-primary hover:text-white duration-200 cursor-pointer text-[#074E37] bg-[#F3E8D6] flex justify-center items-center">
             <Heart className="size-4" />
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
 
       <div className="pt-8.5 pl-5 pr-8.25 pb-3.25">
