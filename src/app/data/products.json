@@ -163,6 +163,11 @@
   {
     "id": 9,
     "image": "/images/Asperges.png",
+    "images" :[
+      "/images/Asperges.png",
+      "/images/asparagus01.jpg",
+      "/images/asparagus02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Asparagus",
     "description": "Tender asparagus spears offering a delicate taste and loaded with essential nutrients.",
@@ -179,6 +184,11 @@
   {
     "id": 10,
     "image": "/images/Cauliflower.jpg",
+    "images" :[
+      "/images/Cauliflower.jpg",
+      "/images/caul01.jpg",
+      "/images/caul02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Cauliflower",
     "description": "Fresh white cauliflower with a mild flavor, great for curries, roasting, and healthy meals.",
@@ -196,6 +206,11 @@
   {
     "id": 11,
     "image": "/images/pumpkin.jpg",
+    "images" :[
+      "/images/pumpkin.jpg",
+      "/images/pumpkin01.jpg",
+      "/images/pumpkin02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Pumpkin",
     "description": "Naturally sweet pumpkin perfect for soups, curries, baking, and nutritious family meals.",
@@ -212,6 +227,11 @@
   {
     "id": 12,
     "image": "/images/walnut.jpg",
+    "images" :[
+      "/images/walnut.jpg",
+      "/images/walnut01.jpg",
+      "/images/walnut02.jpg"
+    ],
     "category": "Nuts",
     "title": "Walnuts",
     "description": "Premium-quality walnuts packed with healthy fats, protein, and a delicious crunchy texture.",
@@ -227,6 +247,11 @@
   {
     "id": 13,
     "image": "/images/almonds.jpg",
+    "images" :[
+      "/images/almonds.jpg",
+      "/images/almond01.jpg",
+      "/images/almond02.jpg"
+    ],
     "category": "Nuts",
     "title": "Almonds",
     "description": "Crunchy natural almonds rich in protein, fiber, and vitamin E for a wholesome snack.",
@@ -242,6 +267,11 @@
   {
     "id": 14,
     "image": "/images/cashews.jpg",
+    "images" :[
+      "/images/cashews.jpg",
+      "/images/cashews01.jpg",
+      "/images/cashews02.jpg"
+    ],
     "category": "Nuts",
     "title": "Cashews",
     "description": "Creamy premium cashews with a naturally buttery taste, ideal for snacking and cooking.",
@@ -256,6 +286,11 @@
   {
     "id": 15,
     "image": "/images/chia.jpg",
+    "images" :[
+      "/images/chia.jpg",
+      "/images/chia01.jpg",
+      "/images/chia02.jpg"
+    ],
     "category": "Seeds",
     "title": "Chia Seeds",
     "description": "Nutrient-rich chia seeds loaded with fiber, omega-3, and protein for smoothies, yogurt, and baking.",
