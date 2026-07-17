@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight, Heart, Share2 } from "lucide-react";
 import Breadcrumb from "@/components/common/BreadCrumb";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useParams } from "next/navigation";
+import "react-inner-image-zoom/lib/styles.min.css";
+import InnerImageZoom from "react-inner-image-zoom";
 
 const ShopSingleProduct = () => {
   const { slug } = useParams();
@@ -78,10 +80,7 @@ const ShopSingleProduct = () => {
           <div className="flex gap-4">
             <div className="flex flex-col gap-3">
               {Array.from({ length: 4 }).map((_, i) => (
-                <Skeleton
-                  key={i}
-                  className="size-16 rounded-md bg-[#EFE6D3]"
-                />
+                <Skeleton key={i} className="size-16 rounded-md bg-[#EFE6D3]" />
               ))}
             </div>
             <Skeleton className="w-[380px] h-[420px] rounded-lg bg-[#EFE6D3]" />
@@ -105,7 +104,10 @@ const ShopSingleProduct = () => {
               <Skeleton className="h-3 w-14 bg-[#EFE6D3]" />
               <div className="flex gap-2">
                 {Array.from({ length: 4 }).map((_, i) => (
-                  <Skeleton key={i} className="h-8 w-14 rounded-md bg-[#EFE6D3]" />
+                  <Skeleton
+                    key={i}
+                    className="h-8 w-14 rounded-md bg-[#EFE6D3]"
+                  />
                 ))}
               </div>
             </div>
@@ -115,7 +117,10 @@ const ShopSingleProduct = () => {
               <Skeleton className="h-3 w-14 bg-[#EFE6D3]" />
               <div className="flex gap-3">
                 {Array.from({ length: 3 }).map((_, i) => (
-                  <Skeleton key={i} className="size-6 rounded-full bg-[#EFE6D3]" />
+                  <Skeleton
+                    key={i}
+                    className="size-6 rounded-full bg-[#EFE6D3]"
+                  />
                 ))}
               </div>
             </div>
@@ -167,10 +172,10 @@ const ShopSingleProduct = () => {
             </div>
 
             <div className="w-95 h-105 rounded-lg overflow-hidden bg-[#FBF6EC] border border-[#EFE6D3]">
-              <img
+              <InnerImageZoom
                 src={(product.images ?? [product.image])[activeImage]}
-                alt={product.title}
-                className="w-full h-full object-cover"
+                zoomSrc={(product.images ?? [product.image])[activeImage]}
+                className="w-full h-full"
               />
             </div>
           </div>
@@ -308,7 +313,10 @@ const ShopSingleProduct = () => {
               </p>
               {product.tags && (
                 <p>
-                  TAGS: <span className="text-[#4B4536]">{product.tags.join(", ")}</span>
+                  TAGS:{" "}
+                  <span className="text-[#4B4536]">
+                    {product.tags.join(", ")}
+                  </span>
                 </p>
               )}
             </div>
