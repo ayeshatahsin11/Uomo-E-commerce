@@ -6,6 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useParams } from "next/navigation";
 import "react-inner-image-zoom/lib/styles.min.css";
 import InnerImageZoom from "react-inner-image-zoom";
+import Container from "@/components/layout/Container";
 
 const ShopSingleProduct = () => {
   const { slug } = useParams();
@@ -46,7 +47,7 @@ const ShopSingleProduct = () => {
   }, [product]);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10">
+    <Container className="max-w-6xl mx-auto px-6 py-10">
       {/* Breadcrumb + prev/next */}
       <div className="flex items-center justify-between mb-6 text-xs font-medium tracking-wide">
         {loading ? (
@@ -156,7 +157,7 @@ const ShopSingleProduct = () => {
                 <button
                   key={img}
                   onClick={() => setActiveImage(i)}
-                  className={`size-16 rounded-md  overflow-hidden border-2 duration-200 cursor-pointer ${
+                  className={`size-25 rounded-md  overflow-hidden border-2 duration-200 cursor-pointer ${
                     activeImage === i
                       ? "border-2 border-[#22331F]"
                       : "border-2 border-[#EFE6D3] hover:border-[#C9BFA8]"
@@ -277,7 +278,7 @@ const ShopSingleProduct = () => {
                 </button>
               </div>
 
-              <button className="flex-1 bg-[#22331F] text-white text-sm font-medium py-2.5 rounded-md hover:bg-[#2C4429] duration-200 cursor-pointer">
+              <button className="w-75 bg-[#22331F] text-white text-sm font-medium py-2.5 rounded-md hover:bg-[#2C4429] duration-200 cursor-pointer">
                 ADD TO CART
               </button>
             </div>
@@ -323,7 +324,7 @@ const ShopSingleProduct = () => {
           </div>
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 
