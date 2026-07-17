@@ -151,10 +151,10 @@ const ShopSingleProduct = () => {
                 <button
                   key={img}
                   onClick={() => setActiveImage(i)}
-                  className={`size-16 rounded-md overflow-hidden border duration-200 cursor-pointer ${
+                  className={`size-16 rounded-md  overflow-hidden border-2 duration-200 cursor-pointer ${
                     activeImage === i
-                      ? "border-[#22331F]"
-                      : "border-[#EFE6D3] hover:border-[#C9BFA8]"
+                      ? "border-2 border-[#22331F]"
+                      : "border-2 border-[#EFE6D3] hover:border-[#C9BFA8]"
                   }`}
                 >
                   <img
@@ -166,7 +166,7 @@ const ShopSingleProduct = () => {
               ))}
             </div>
 
-            <div className="w-[380px] h-[420px] rounded-lg overflow-hidden bg-[#FBF6EC] border border-[#EFE6D3]">
+            <div className="w-95 h-105 rounded-lg overflow-hidden bg-[#FBF6EC] border border-[#EFE6D3]">
               <img
                 src={(product.images ?? [product.image])[activeImage]}
                 alt={product.title}
@@ -199,7 +199,7 @@ const ShopSingleProduct = () => {
               </p>
             )}
 
-            {/* Sizes */}
+            {/* Weights */}
             {product.weights && (
               <div>
                 <div className="flex items-center justify-between mb-2">

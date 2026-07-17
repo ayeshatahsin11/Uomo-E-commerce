@@ -2,6 +2,11 @@
   {
     "id": 1,
     "image": "/images/banana.jpg",
+    "images" : [
+      "/images/banana.jpg",
+      "/images/banana01.jpg",
+      "/images/banana02.jpg"
+      ],
     "category": "Fruit",
     "title": "Organic Banana",
     "description": "Naturally sweet organic bananas rich in potassium and perfect for smoothies, snacks, or breakfast.",
@@ -10,13 +15,18 @@
     "reviews": 323963,
     "price": 35,
       "colors": [
-      { "name": "Green", "hex": "#7CB342" },
-      { "name": "Yellow", "hex": "#FDD835" }
+        { "name": "Yellow", "hex": "#FDD835" },
+      { "name": "Green", "hex": "#7CB342" }
     ]
   },
   {
     "id": 2,
     "image": "/images/kiwi.jpg",
+    "images" : [
+      "/images/kiwi.jpg",
+      "/images/kiwi01.jpg",
+      "/images/kiwi02.jpg"
+    ],
     "category": "Fruit",
     "title": "Fresh Kiwi",
     "description": "Juicy, vitamin C-rich kiwis with a refreshing sweet and tangy flavor for healthy everyday eating.",
@@ -33,6 +43,11 @@
   {
     "id": 3,
     "image": "/images/new_strawberry.jpg",
+    "images" : [
+      "/images/new_strawberry.jpg",
+      "/images/strawberry01.jpg",
+      "/images/strawberry02.jpg"
+    ],
     "category": "Fruit",
     "title": "Large Strawberry",
     "description": "Handpicked large strawberries bursting with sweetness, perfect for desserts, smoothies, and fresh snacks.",
@@ -48,6 +63,11 @@
   {
     "id": 4,
     "image": "/images/orange.jpg",
+    "images" : [
+      "/images/orange.jpg",
+      "/images/orange01.jpg",
+      "/images/orange02.jpg"
+    ],
     "category": "Fruit",
     "title": "Organic Oranges",
     "description": "Fresh organic oranges packed with vitamin C and refreshing citrus flavor for juices or healthy snacks.",
@@ -63,6 +83,11 @@
   {
     "id": 5,
     "image": "/images/Pomegranate.png",
+    "images" : [
+      "/images/Pomegranate.png",
+      "/images/pom01.jpg",
+      "/images/pom2.jpg"
+    ],
     "category": "Fruit",
     "title": "Pomegranate",
     "description": "Premium pomegranates filled with juicy ruby-red seeds, rich in antioxidants and natural goodness.",
@@ -78,6 +103,11 @@
   {
     "id": 6,
     "image": "/images/tomato.jpg",
+    "images" :[
+      "/images/tomato.jpg",
+      "/images/tomato01.jpg",
+      "/images/tomato02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Juicy Tomatoes",
     "description": "Farm-fresh juicy tomatoes ideal for salads, sauces, curries, and everyday cooking.",
@@ -94,6 +124,11 @@
   {
     "id": 7,
     "image": "/images/onion.png",
+    "images" : [
+      "/images/onion.png",
+      "/images/onion01.jpg",
+      "/images/onion02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Large Onions",
     "description": "Fresh large onions with a rich flavor that enhances every recipe from soups to stir-fries.",
@@ -109,6 +144,11 @@
   {
     "id": 8,
     "image": "/images/broccoli.jpg",
+    "images" :[
+      "/images/broccoli.jpg",
+      "/images/broc01.jpg",
+      "/images/broc02.jpg"
+    ],
     "category": "Vegetable",
     "title": "Fresh Broccoli",
     "description": "Crisp green broccoli packed with vitamins and fiber, perfect for steaming, roasting, or stir-frying.",
