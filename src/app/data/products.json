@@ -136,7 +136,7 @@
     "rating": 4.5,
     "reviews": 125874,
     "price": 38,   "colors": [
-      { "name": "Red", "hex": "#8E24AA" },
+      { "name": "Purple", "hex": "#8E24AA" },
       { "name": "White", "hex": "#F5F5F5" },
       { "name": "Yellow", "hex": "#D4A017" }
     ]

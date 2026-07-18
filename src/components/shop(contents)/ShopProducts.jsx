@@ -16,7 +16,7 @@ const gridColsMap = {
 };
 
 const ShopProducts = () => {
-  const { allProducts, setAllProducts, selectedCategory } = useProducts();
+  const { allProducts, setAllProducts, selectedCategory, selectedColor } = useProducts();
 
   const sortValue = useShopStore((state) => state.sortValue);
   const gridView = useShopStore((state) => state.gridView);
@@ -26,17 +26,24 @@ const ShopProducts = () => {
     const fetchProducts = async () => {
       const res = await fetch("/api/products");
       const data = await res.json();
-      setAllProducts(data); // ← master list e boshano hocche, ekhane e ekbar e fetch
+      setAllProducts(data);
       setLoading(false);
     };
     fetchProducts();
   }, []);
 
-  // ---- Category onujayi display list derive kora, master ke touch na kore ----
-  const displayedProducts =
+  // ---- Step 1: category diye filter ----
+  const categoryFiltered =
     selectedCategory === "All Products"
       ? allProducts
       : allProducts.filter((p) => p.category === selectedCategory);
+
+  // ---- Step 2: er upor color diye filter (product.colors array-er moddhe match ache kina) ----
+  const displayedProducts = selectedColor
+    ? categoryFiltered.filter((p) =>
+        p.colors?.some((c) => c.name === selectedColor)
+      )
+    : categoryFiltered;
 
   const sortedProducts = [...displayedProducts].sort((a, b) => {
     switch (sortValue) {
@@ -69,7 +76,7 @@ const ShopProducts = () => {
             </Card>
           ))}
         </div>
-      ) : (
+      ) : displayedProducts.length ? (
         <Paginate
           items={sortedProducts}
           itemsPerPage={8}
@@ -78,6 +85,10 @@ const ShopProducts = () => {
             <ProductCards key={product.id} product={product} />
           )}
         />
+      ) : (
+        <p className="text-center text-[#9A8F7A] py-20">
+          No products match this filter.
+        </p>
       )}
     </div>
   );

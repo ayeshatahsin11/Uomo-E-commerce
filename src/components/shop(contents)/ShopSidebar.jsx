@@ -21,7 +21,8 @@ const ShopSidebar = ({
   onFilterChange,
   className = "",
 }) => {
-  const { allProducts, selectedCategory, setSelectedCategory } = useProducts();
+  const { allProducts, selectedCategory, setSelectedCategory, selectedColor, setSelectedColor } = useProducts();
+
 
   // ---- Categories: shobshomoy master list theke, tai kokhono shrink hoy na ----
   const categories = [
@@ -43,7 +44,7 @@ const ShopSidebar = ({
   const filterWeight = currentProducts.flatMap((item) => item.weights ?? []);
   const weights = [...new Set(filterWeight)];
 
-  const [selectedColor, setSelectedColor] = useState(null);
+
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [brandSearch, setBrandSearch] = useState("");
@@ -116,24 +117,24 @@ const ShopSidebar = ({
       </FilterAccordion>
 
       {/* Color */}
-      <FilterAccordion title="Color">
-        <div className="flex flex-wrap gap-3 py-2 px-2">
-          {colors.map((color) => (
-            <button
-              key={color.name}
-              type="button"
-              aria-label={color.name}
-              onClick={() => setSelectedColor((prev) => (prev === color.name ? null : color.name))}
-              className={`size-7 rounded-full duration-200 ${
-                selectedColor === color.name
-                  ? "ring-2 ring-offset-2 ring-[#22331F]"
-                  : "ring-1 ring-offset-2 ring-transparent hover:ring-[#C9BFA8]"
-              }`}
-              style={{ backgroundColor: color.hex }}
-            />
-          ))}
-        </div>
-      </FilterAccordion>
+   <FilterAccordion title="Color">
+  <div className="flex flex-wrap gap-3 py-2 px-2">
+    {colors.map((color) => (
+      <button
+        key={color.name}
+        type="button"
+        aria-label={color.name}
+        onClick={() => setSelectedColor(color.name)} // ← shudhu eta, prev-check dorkar nai
+        className={`size-7 rounded-full duration-200 ${
+          selectedColor === color.name
+            ? "ring-2 ring-offset-2 ring-[#22331F]"
+            : "ring-1 ring-offset-2 ring-transparent hover:ring-[#C9BFA8]"
+        }`}
+        style={{ backgroundColor: color.hex }}
+      />
+    ))}
+  </div>
+</FilterAccordion>
 
       {/* Weight */}
       <FilterAccordion title="Weight">
