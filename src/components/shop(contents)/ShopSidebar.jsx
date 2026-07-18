@@ -16,13 +16,20 @@ const defaultBrands = [
 
 const ShopSidebar = ({
   brands = defaultBrands,
-  minPrice = 1,
-  maxPrice = 100,
+  minPrice = 10,
+  maxPrice = 50,
   onFilterChange,
   className = "",
 }) => {
-  const { allProducts, selectedCategory, setSelectedCategory, selectedColor, setSelectedColor } = useProducts();
-
+ const {
+  allProducts,
+  selectedCategory,
+  setSelectedCategory,
+  selectedColor,
+  setSelectedColor,
+  priceRange,
+  setPriceRange,
+} = useProducts();
 
   // ---- Categories: shobshomoy master list theke, tai kokhono shrink hoy na ----
   const categories = [
@@ -48,24 +55,22 @@ const ShopSidebar = ({
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [brandSearch, setBrandSearch] = useState("");
-  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
+  
 
   const toggleBrand = (label) => {
     setSelectedBrands((prev) =>
       prev.includes(label) ? prev.filter((b) => b !== label) : [...prev, label]
     );
   };
+const handleMinPriceChange = (e) => {
+  const value = Math.min(Number(e.target.value), priceRange[1] - 1);
+  setPriceRange([value, priceRange[1]]);
+};
 
-  const handleMinPriceChange = (e) => {
-    const value = Math.min(Number(e.target.value), priceRange[1] - 1);
-    setPriceRange([value, priceRange[1]]);
-  };
-
-  const handleMaxPriceChange = (e) => {
-    const value = Math.max(Number(e.target.value), priceRange[0] + 1);
-    setPriceRange([priceRange[0], value]);
-  };
-
+const handleMaxPriceChange = (e) => {
+  const value = Math.max(Number(e.target.value), priceRange[0] + 1);
+  setPriceRange([priceRange[0], value]);
+};
   const filteredBrands = brands.filter((b) =>
     b.label.toLowerCase().includes(brandSearch.toLowerCase())
   );

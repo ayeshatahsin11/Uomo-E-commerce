@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState, useEffect } from "react";
 import ProductCards from "../common/ProductCards";
@@ -16,7 +14,13 @@ const gridColsMap = {
 };
 
 const ShopProducts = () => {
-  const { allProducts, setAllProducts, selectedCategory, selectedColor } = useProducts();
+  const {
+    allProducts,
+    setAllProducts,
+    selectedCategory,
+    selectedColor,
+    priceRange,
+  } = useProducts();
 
   const sortValue = useShopStore((state) => state.sortValue);
   const gridView = useShopStore((state) => state.gridView);
@@ -32,18 +36,23 @@ const ShopProducts = () => {
     fetchProducts();
   }, []);
 
-  // ---- Step 1: category diye filter ----
+  // ---- Step 1: category ----
   const categoryFiltered =
     selectedCategory === "All Products"
       ? allProducts
       : allProducts.filter((p) => p.category === selectedCategory);
 
-  // ---- Step 2: er upor color diye filter (product.colors array-er moddhe match ache kina) ----
-  const displayedProducts = selectedColor
+  // ---- Step 2: color (er upor) ----
+  const colorFiltered = selectedColor
     ? categoryFiltered.filter((p) =>
         p.colors?.some((c) => c.name === selectedColor)
       )
     : categoryFiltered;
+
+  // ---- Step 3: price range (er upor) ----
+  const displayedProducts = colorFiltered.filter(
+    (p) => p.price >= priceRange[0] && p.price <= priceRange[1]
+  );
 
   const sortedProducts = [...displayedProducts].sort((a, b) => {
     switch (sortValue) {
