@@ -1,3 +1,5 @@
+
+
 "use client";
 import React, { useState, useEffect } from "react";
 import ProductCards from "../common/ProductCards";
@@ -14,31 +16,38 @@ const gridColsMap = {
 };
 
 const ShopProducts = () => {
-  const { setProducts, products } = useProducts(); // local useState use na kore zustand diye data global kora holo
+  const { allProducts, setAllProducts, selectedCategory } = useProducts();
 
   const sortValue = useShopStore((state) => state.sortValue);
   const gridView = useShopStore((state) => state.gridView);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchProducts = async () => {
       const res = await fetch("/api/products");
       const data = await res.json();
-      setProducts(data);
+      setAllProducts(data); // ← master list e boshano hocche, ekhane e ekbar e fetch
       setLoading(false);
     };
     fetchProducts();
   }, []);
 
-  const sortedProducts = [...products].sort((a, b) => {
+  // ---- Category onujayi display list derive kora, master ke touch na kore ----
+  const displayedProducts =
+    selectedCategory === "All Products"
+      ? allProducts
+      : allProducts.filter((p) => p.category === selectedCategory);
+
+  const sortedProducts = [...displayedProducts].sort((a, b) => {
     switch (sortValue) {
       case "price_low_high":
         return a.price - b.price;
       case "price_high_low":
         return b.price - a.price;
       case "name_a_z":
-        return a.name.localeCompare(b.name);
+        return a.title.localeCompare(b.title);
       case "name_z_a":
-        return b.name.localeCompare(a.name);
+        return b.title.localeCompare(a.title);
       default:
         return 0;
     }
@@ -49,7 +58,7 @@ const ShopProducts = () => {
       {loading ? (
         <div className="grid grid-cols-4 gap-5">
           {Array.from({ length: 8 }).map((_, index) => (
-            <Card className="w-full max-w-xs">
+            <Card key={index} className="w-full max-w-xs">
               <CardContent>
                 <Skeleton className="aspect-video w-full" />
               </CardContent>

@@ -1,10 +1,10 @@
+
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import FilterAccordion from "./FilterAccordion";
 import { useProducts } from "@/store/useProduct";
 
-// ---- Default data (food e-commerce onujayi) - tumi prop diye override korte parbe ----
 const defaultBrands = [
   { label: "Organic Valley", count: 24 },
   { label: "Fresh Farms", count: 41 },
@@ -21,36 +21,33 @@ const ShopSidebar = ({
   onFilterChange,
   className = "",
 }) => {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const { allProducts, selectedCategory, setSelectedCategory } = useProducts();
+
+  // ---- Categories: shobshomoy master list theke, tai kokhono shrink hoy na ----
+  const categories = [
+    "All Products",
+    ...new Set(allProducts.map((item) => item.category)),
+  ];
+
+  // ---- Currently visible set (category onujayi), color/weight eta theke derive ----
+  const currentProducts =
+    selectedCategory === "All Products"
+      ? allProducts
+      : allProducts.filter((p) => p.category === selectedCategory);
+
+  const filterColours = currentProducts.flatMap((item) => item.colors ?? []);
+  const colors = Array.from(
+    new Map(filterColours.map((color) => [color.name, color])).values()
+  );
+
+  const filterWeight = currentProducts.flatMap((item) => item.weights ?? []);
+  const weights = [...new Set(filterWeight)];
+
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [brandSearch, setBrandSearch] = useState("");
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
-  const {products} = useProducts(); // product globally fetching from zustand store
-
-  const filterCategory = products.map((item)=>item.category);
-  const categories = [...new Set(filterCategory)]
-  
-  
- // Colors - object array, tai flatMap + Map diye dedupe korte hobe
-  const filterColours = products.flatMap((item) => item.colors ?? []);
-  const colors = Array.from(
-    new Map(filterColours.map((color) => [color.name, color])).values()
-  );
-
-  const filterWeight = products.flatMap((item) => item.weights ?? []);
- const weights = [...new Set(filterWeight)];
- console.log(weights);
- 
-
-  const toggleCategory = (label) => {
-    setSelectedCategories((prev) =>
-      prev.includes(label)
-        ? prev.filter((c) => c !== label)
-        : [...prev, label]
-    );
-  };
 
   const toggleBrand = (label) => {
     setSelectedBrands((prev) =>
@@ -72,45 +69,39 @@ const ShopSidebar = ({
     b.label.toLowerCase().includes(brandSearch.toLowerCase())
   );
 
-  // Parent ke shob filter state pathiye dei, jodi callback deওয়া thake
   React.useEffect(() => {
     onFilterChange?.({
-      categories: selectedCategories,
+      category: selectedCategory,
       color: selectedColor,
       size: selectedSize,
       brands: selectedBrands,
       priceRange,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCategories, selectedColor, selectedSize, selectedBrands, priceRange]);
+  }, [selectedCategory, selectedColor, selectedSize, selectedBrands, priceRange]);
 
   return (
-    <div
-      className={`max-w-72 shrink-0 bg-[#FBF6EC] border border-[#EFE6D3] rounded-lg px-6 py-2 ${className}`}
-    >
+    <div className={`max-w-72 shrink-0 bg-[#FBF6EC] border border-[#EFE6D3] rounded-lg px-6 py-2 ${className}`}>
       {/* Categories */}
       <FilterAccordion title="Product Categories">
         <ul className="flex flex-col gap-3">
           {categories.map((cat) => (
             <li key={cat}>
-              <label className="flex items-center justify-between gap-2 cursor-pointer group">
+              <label
+                onClick={() => setSelectedCategory(cat)}
+                className="flex items-center justify-between gap-2 cursor-pointer group"
+              >
                 <span className="flex items-center gap-2.5">
                   <span
                     className={`size-4 rounded-[4px] border flex items-center justify-center duration-200 ${
-                      selectedCategories.includes(cat)
+                      selectedCategory === cat
                         ? "bg-[#22331F] border-[#22331F]"
                         : "border-[#C9BFA8] group-hover:border-[#22331F]"
                     }`}
                   >
-                    {selectedCategories.includes(cat) && (
+                    {selectedCategory === cat && (
                       <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                        <path
-                          d="M1 4L3.5 6.5L9 1"
-                          stroke="white"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
+                        <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     )}
                   </span>
@@ -118,12 +109,6 @@ const ShopSidebar = ({
                     {cat}
                   </span>
                 </span>
-                <input
-                  type="checkbox"
-                  className="hidden"
-                  checked={selectedCategories.includes(cat)}
-                  onChange={() => toggleCategory(cat)}
-                />
               </label>
             </li>
           ))}
@@ -138,11 +123,7 @@ const ShopSidebar = ({
               key={color.name}
               type="button"
               aria-label={color.name}
-              onClick={() =>
-                setSelectedColor((prev) =>
-                  prev === color.name ? null : color.name
-                )
-              }
+              onClick={() => setSelectedColor((prev) => (prev === color.name ? null : color.name))}
               className={`size-7 rounded-full duration-200 ${
                 selectedColor === color.name
                   ? "ring-2 ring-offset-2 ring-[#22331F]"
@@ -153,16 +134,15 @@ const ShopSidebar = ({
           ))}
         </div>
       </FilterAccordion>
-      {/* Sizes (weight/pack size) */}
+
+      {/* Weight */}
       <FilterAccordion title="Weight">
         <div className="flex flex-wrap gap-2.5">
           {weights.map((weight) => (
             <button
               key={weight}
               type="button"
-              onClick={() =>
-                setSelectedSize((prev) => (prev === weight ? null : weight))
-              }
+              onClick={() => setSelectedSize((prev) => (prev === weight ? null : weight))}
               className={`px-4 py-2 text-xs font-medium rounded-md border duration-200 cursor-pointer ${
                 selectedSize === weight
                   ? "bg-[#22331F] border-[#22331F] text-white"
@@ -185,12 +165,8 @@ const ShopSidebar = ({
             placeholder="Search"
             className="w-full text-sm bg-white border border-[#E6DCC8] rounded-md pl-3 pr-9 py-2.5 outline-none focus:border-[#22331F] duration-200"
           />
-          <Search
-            size={15}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9A8F7A]"
-          />
+          <Search size={15} className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9A8F7A]" />
         </div>
-
         <ul className="flex flex-col gap-3 max-h-48 overflow-y-auto pr-1">
           {filteredBrands.length ? (
             filteredBrands.map((brand) => (
@@ -206,13 +182,7 @@ const ShopSidebar = ({
                     >
                       {selectedBrands.includes(brand.label) && (
                         <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                          <path
-                            d="M1 4L3.5 6.5L9 1"
-                            stroke="white"
-                            strokeWidth="1.6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
+                          <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       )}
                     </span>
@@ -239,9 +209,7 @@ const ShopSidebar = ({
       {/* Price */}
       <FilterAccordion title="Price">
         <div className="relative h-1.5 mt-2 mb-4">
-          {/* base track */}
           <div className="absolute inset-0 rounded-full bg-[#E6DCC8]" />
-          {/* active fill between two handles */}
           <div
             className="absolute h-full rounded-full bg-[#22331F]"
             style={{
@@ -266,7 +234,6 @@ const ShopSidebar = ({
             className="range-thumb absolute w-full top-1/2 -translate-y-1/2 appearance-none bg-transparent pointer-events-none"
           />
         </div>
-
         <div className="flex items-center justify-between text-xs text-[#4B4536] font-medium">
           <span>Min Price: ${priceRange[0]}</span>
           <span>Max Price: ${priceRange[1]}</span>
