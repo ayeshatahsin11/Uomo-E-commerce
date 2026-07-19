@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../Container";
 import BannerImg from "../../../app/assests/Images/BannerImage.png";
 import BannerItem from "../../../app/assests/Images/bannerItem-image.png";
@@ -11,7 +11,17 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import axios from "axios";
 const Banner = () => {
+  useEffect(()=>{
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/banner/getbanners`).then((res)=>{
+          console.log(res);
+          
+    }).catch((err)=>{
+      console.log(err);
+      
+    })
+  })
   return (
     <>
       <section
